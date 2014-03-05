@@ -2,7 +2,10 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET     /                           controllers.Application.index()
+GET     /                                   controllers.Application.index()
+GET     /scalability/show-off               controllers.Application.scalabilityShowOff()
+GET     /scalability/get-proof              controllers.Application.scalabilityGetProof()
+GET     /scalability/convince-your-boss     controllers.Application.scalabilityConvince()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
