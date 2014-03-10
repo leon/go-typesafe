@@ -5,7 +5,13 @@
 GET     /                                   controllers.Application.index()
 GET     /scalability/show-off               controllers.Application.scalabilityShowOff()
 GET     /scalability/get-proof              controllers.Application.scalabilityGetProof()
-GET     /scalability/convince-your-boss     controllers.Application.scalabilityConvince()
+GET     /productivity/show-off              controllers.Application.productivityShowOff()
+GET     /productivity/get-proof             controllers.Application.productivityGetProof()
+GET     /modernize/show-off                 controllers.Application.modernizeShowOff()
+GET     /modernize/get-proof                controllers.Application.modernizeGetProof()
+GET     /agility-and-quality/show-off       controllers.Application.agilityQualityShowOff()
+GET     /agility-and-quality/get-proof      controllers.Application.agilityQualityGetProof()
+GET     /convince-your-boss                 controllers.Application.convince()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

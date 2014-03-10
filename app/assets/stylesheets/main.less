@@ -26,12 +26,13 @@
 @akka-blue:     #2e6d82;
 
 @green:         #a1cd43;
-@green-dkr:     #799a32;
-@green-ltr:     #b4d769;
+@green-dkr:     darken(@green, 5%);
+@green-ltr:     lighten(@green, 5%);
 
 @yellow:         #ffc40c;
-@yellow-dkr:     #bf9309;
-@yellow-ltr:     #ffd03d;
+@yellow-dkr:     darken(@yellow, 5%);
+@yellow-ltr:     lighten(@yellow, 5%);
+
 
 @purple:         #821e70;
 @purple-dkr:     #621654;
@@ -41,37 +42,117 @@
 @rasberry-dkr:   #9b2434;
 @rasberry-ltr:   #d8596a;
 
-@br: 3px;
+@scalability:    @blue;
+@productivity:   @red;
+@modernize:      @blue-text;
+@quality:        @red-text;
+
+
+
+
+@br: 2px;
 
 @typesafe-fonts: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 body {
   background: @white-ltr;
   font-family: @typesafe-fonts;
-  color: @slate-text;
+  color: @navy;
 }
 h1,h2,h3,h4,h5,h6 {
-  color: @slate-text;
-  line-height: 1.1em; 
+  color: @navy;
+  line-height: 1.1em;
+  font-weight: 400;
+  font-family: @typesafe-fonts;
+}
+p {
+  line-height: 1.4em;
 }
 .btn {
   display: inline-block;
   border-radius: @br;
-  background-color: @blue;
+  background-color: @red;
   line-height: 40px;
-  padding: 0 10px;
+  padding: 0 30px;
   color: @white;
-  border-bottom: 2px solid @blue-text;
+  border-bottom: 2px solid @red-text;
   &:hover {
-    background-color: @blue-dkr;
+    background-color: @red-dkr;
     color: @white;
   }
+  &:after {
+    content: " >";
+    right: -200px;
+    position: absolute;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  &:hover:after {
+    right: 30px;
+  }
+
 }
+
+
+
+
 .inner-wrap {
   min-height: 100%;
 }
+nav.tab-bar {
+  background: @navy;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  height: 60px;
+  line-height: 60px;
+  h1 a {
+    font-weight: 400;
+    color: @white;
+    text-transform: titlecase;
+    line-height: 60px;
+    height: 60px;
+    &:hover {
+      color: @blue;
+    }
+  }
+  a.menu-icon {
+    line-height: 60px;
+    height: 60px;
+    span {
+      top: 14px;
+      box-shadow: 0 10px 0 1px @red,0 16px 0 1px @red,0 22px 0 1px @red;
+    }
+    &:hover span {
+      box-shadow: 0 10px 0 1px @blue,0 16px 0 1px @blue,0 22px 0 1px @blue;
+    }
+  }
+  section.left-small {
+    line-height: 60px;
+    height: 60px;
+  }
+  section.tab-bar-section {
+    line-height: 60px;
+    height: 60px;
+  }
+  section.support {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 60px;
+    line-height: 60px;
+    .support-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+
+
+}
 
 #page-content {
-  padding: 40px 0 200px 0;
+  padding: 80px 0 200px 0;
 }
 
 .track-grid {
@@ -82,65 +163,157 @@ h1,h2,h3,h4,h5,h6 {
     background-color: @navy;
     vertical-align: middle;
     color: @white;
-    min-height: 200px;
-    border: 2px solid @white;
+    padding-bottom: 0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
     &.scalability {
-      background: @green;
+      background: @scalability;
+      border-radius: 30px 0 0 0;
+      &:hover {
+        background: darken(@scalability, 5%);
+        background-color: @navy;
+      }
+      & a:before {
+        content: "Build a Typesafe Reactive Platform App that scales!";
+      }
     }
     &.productivity {
-      background: @yellow;
+      background: @productivity;
+      border-radius: 0 30px 0 0;
+      &:hover {
+        background: darken(@productivity, 5%);
+        background-color: @navy;
+      }
+      & a:before {
+        content: "Increase your productivity with features like auto-recompile, type inference, and case classes";
+      }
     }
     &.modernize {
-      background: @purple;
+      background: @modernize;
+      border-radius: 0 0 0 30px;
+      &:hover {
+        background: darken(@modernize, 5%);
+        background-color: @navy;
+      }
+      & a:before {
+        content: "Build HTML5, mobile, and big data apps using frameworks designed for it";
+      }
     }
     &.quality {
-      background: @rasberry;
+      background: @quality;
+      border-radius: 0 0 30px 0;
+      &:hover {
+        background: darken(@quality, 5%);
+        background-color: @navy;
+      }
+      & a:before {
+        content: "Deliver higher quality releases more frequently";
+      }
     }
     a {
+      
       color: @white;
       display: inline-block;
       width: 100%;
-      min-height: 200px;
+      padding: 60px 30px;
+      font-size: 18px;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, .5);
+      overflow: hidden;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+      &:before {
+        position: absolute;
+        width: 100%;
+        display: inline-block;
+        width: 100%;
+        padding: 30px 30px;
+        font-size: 18px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        left: -1000px;
+        top: 0;
+      }
+      span {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.3s;
+        -webkit-backface-visibility: hidden;
+        -moz-transition: all 0.3s;
+        -moz-backface-visibility: hidden;
+        transition: all 0.3s;
+        backface-visibility: hidden;
+        overflow: hidden;
+      }
+      &:hover span {
+        -webkit-transform: translateX(300%);
+        -moz-transform: translateX(300%);
+        -ms-transform: translateX(300%);
+        transform: translateX(300%);
+      }
+      &:hover:before {
+        left: 0;
+      }
+
     }
   }
 }
 
+
+
 .left-off-canvas-menu {
-  background-color: @navy;
+  background-color: @slate;
 }
+.move-right {
+  a.exit-off-canvas, a.exit-off-canvas:hover {
+  background-color: transparent;
+  }
+}
+
 ul.off-canvas-list {
-  background-color: @navy;
   li {
     a {
-      background-color: @navy;
+      font-weight: 400;
     }
     &.scalability strong a {
-      background-color: @green;
+      background-color: @scalability;
       color: @white;
     }
     &.scalability a {
-      color: @green;
+      color: @scalability;
     }
     &.productivity strong a {
-      background-color: @yellow;
+      background-color: @productivity;
       color: @white;
     }
     &.productivity a {
-      color: @yellow;
+      color: @productivity;
     }
     &.modernize strong a {
-      background-color: @purple;
+      background-color: @modernize;
       color: @white;
     }
     &.modernize a {
-      color: @purple-ltr;
+      color: @modernize;
     }
     &.quality strong a {
-      background-color: @rasberry;
+      background-color: @quality;
       color: @white;
     }
     &.quality a {
-      color: @rasberry-ltr;
+      color: @quality;
+    }
+    &.convince strong a {
+      background-color: @slate-ltr;
+      color: @white;
     }
   }
 }
@@ -148,24 +321,25 @@ article footer {
   margin: 30px 0;
   text-align: right;
 }
-article.show h1 {
+article h1 {
   font-size: 1.8em;
-}
-article.proof h1 {
-  font-size: 1.8em;
+  font-weight: 400;
 }
 
-article.scalability {
+article {
   h1,h2,h3 {
-    color: @green-dkr;
+    color: @navy;
   }
   nav {
     display: inline-block;
-    padding: 0 0 20px 0;
-    color: @green-dkr;
+    color: @navy;
     text-transform: uppercase;
+    margin: 0 0 1em 0;
+    padding: 0 0 1em 0;
+    width: 100%;
+    border-bottom: 1px solid @white-dkr;
     a {
-      color: @green-dkr;
+      color: @navy;
       &:after {
         content: "\232A";
         margin: 0 0 0 15px;
@@ -174,9 +348,187 @@ article.scalability {
       &:last-child {
         &:after {
           content: "";
+          margin: 0;
         }
+      }
+      &.current {
+        font-weight: 400;
       }
     }
   }
   
+}
+
+
+article.scalability {
+  h1,h2,h3 {
+    color: @scalability;
+  }
+  .btn {
+    background-color: @scalability;
+    border-bottom-color: darken(@scalability, 10%); 
+    &:hover {
+      background-color: darken(@scalability, 5%);
+    }
+  }
+  nav {
+    color: @scalability;
+    a {
+      color: @scalability;
+    }
+  }
+}
+
+article.productivity {
+  h1,h2,h3 {
+    color: @productivity;
+  }
+  .btn {
+    background-color: @productivity;
+    border-bottom-color: darken(@productivity, 10%); 
+    &:hover {
+      background-color: darken(@productivity, 5%);
+    }
+  }
+  nav {
+    color: @productivity;
+    a {
+      color: @productivity;
+    }
+  }
+}
+
+
+section#support {
+  margin-top: 100px;
+}
+
+#trigger-overlay {
+  cursor: pointer;
+}
+/* Overlay style */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(83,205,236, 0.9);
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  overflow: hidden;
+  border: none;
+  background: url(../images/cross.png) no-repeat center center;
+  text-indent: 200%;
+  color: transparent;
+  outline: none;
+  z-index: 1000;
+}
+
+/* Effects */
+.overlay-hugeinc {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.overlay-hugeinc.open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.overlay-hugeinc nav {
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+}
+
+.overlay-hugeinc nav ul {
+  opacity: 0.4;
+  -webkit-transform: translateY(-25%) rotateX(35deg);
+  transform: translateY(-25%) rotateX(35deg);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.overlay-hugeinc.open nav ul {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+.overlay-hugeinc.close nav ul {
+  -webkit-transform: translateY(25%) rotateX(-35deg);
+  transform: translateY(25%) rotateX(-35deg);
+}
+
+@media screen and (max-height: 30.5em) {
+  .overlay nav {
+    height: 70%;
+    font-size: 34px;
+  }
+  .overlay ul li {
+    min-height: 34px;
+  }
+}
+
+
+
+
+form {
+  text-align: left;
+  max-width: 680px;
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+
+  input[type="text"],
+  textarea {
+    display: block;
+    width: 300px;
+    margin: 0 auto .5em auto;
+    height: 40px;
+    line-height: 30px;
+    padding: 4px 10px;
+    font-size: 1em;
+    background-color: @white-ltr;
+    color: @blue-text;
+    border: 1px solid @blue-dkr;
+    border-radius: @br;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  fieldset input[type="text"] {
+    float: left;
+    margin: 0 2% .5em 2%;
+    width: 48%;
+  }
+
+  fieldset input[type="text"]:first-child {
+    margin: 0 2% .5em 0;
+  }
+
+  fieldset input[type="text"]:last-child {
+    margin: 0 0 .5em 2%;
+  }
+
+  fieldset textarea {
+    width: 100%;
+    margin: 0 0 .5em 0%;
+  }
+
 }
