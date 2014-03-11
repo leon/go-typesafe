@@ -81,7 +81,7 @@ if ( typeof define === 'function' && define.amd ) {
 
 
 (function() {
-	var triggerBttn = document.getElementById( 'trigger-overlay' ),
+  var triggerBttn = document.getElementById( 'trigger-overlay' ),
 		overlay = document.querySelector( 'div.overlay' ),
 		closeBttn = overlay.querySelector( 'button.overlay-close' );
 		transEndEventNames = {
@@ -119,4 +119,10 @@ if ( typeof define === 'function' && define.amd ) {
 
 	triggerBttn.addEventListener( 'click', toggleOverlay );
 	closeBttn.addEventListener( 'click', toggleOverlay );
+  
+  //spoof clicks to trigger the overlay
+  $('.trigger-overlay').on('click', function(){
+    $('#trigger-overlay').click();
+  })
+
 })();
