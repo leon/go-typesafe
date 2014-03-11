@@ -5,7 +5,7 @@
 @blue:          #53CDEC;
 @blue-dkr:      #42b8d7;
 @blue-ltr:      #c3eef8;
-@blue-text:      #19aacf;
+@blue-text:     #19aacf;
 @blue-ts:       #7BDCF5;
 @blue-teal:     #187086;
 @navy:          #103a51;
@@ -45,16 +45,17 @@
 @scalability:    @blue;
 @productivity:   @red;
 @modernize:      @blue-text;
-@quality:        @red-text;
+@agility:        @red-text;
 
-
-@footerHeight: 60px;
+@footerHeight: 100px;
 
 @br: 2px;
 
-@tgbr: 10px;
+@tgbr: 4px;
 
 @typesafe-fonts: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+
+@anime: all 300ms ease-in-out;
 
 html, body {
   height: 100%
@@ -64,6 +65,9 @@ body {
   background: @white-dkr;
   font-family: @typesafe-fonts;
   color: @navy;
+  font-smoothing: antialiased;
+  -webkit-font-size-adjust: none;
+  text-rendering: optimizeLegibility;
 
 }
 h1,h2,h3,h4,h5,h6 {
@@ -85,12 +89,18 @@ p {
   border-bottom: 2px solid @red-text;
   position: relative;
   overflow: hidden;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, .2);
+  width: 100%;
+  text-align: center;
+  transition: @anime;
+  text-transform: uppercase;
   &:hover {
     background-color: @red-dkr;
     color: @white;
+    transition: @anime;
   }
   &:after {
-    content: " >";
+    content: "\232A";
     right: -30px;
     opacity: 0;
     position: absolute;
@@ -117,30 +127,31 @@ p {
 
   .site-footer {
     height: @footerHeight;
-    background: @white-dkr;
+    background: @navy;
     width: 100%;
     position: absolute;
     bottom: 0;
     background-size: 10%;
     text-align: center;
+    box-shadow: 0 -3px 0 rgba(128,128,128,.1);
     .ts-logo {
       height: 30px;
-      margin-top: 15px;
+      margin-top: 30px;
       margin-bottom: 0px;
 
 
     }
     .reactive-graphic {
       position: absolute;
-      height: 100px;
-      top: -50px;
-      right: -50px;
+      height: 200px;
+      top: -110px;
+      right: -100px;
     }
     p {
       color: @white;
       font-size: .8em;
       margin: 0;
-      display: none
+
     }
   }
 }
@@ -151,25 +162,32 @@ nav.tab-bar {
   z-index: 999;
   height: 60px;
   line-height: 60px;
+  box-shadow: 0 0 8px rgba(0,0,0,.5);
   h1 a {
     font-weight: 400;
     color: @white;
     text-transform: titlecase;
     line-height: 60px;
     height: 60px;
+    transition: @anime;
     &:hover {
       color: @blue;
+      transition: @anime;
     }
   }
   a.menu-icon {
     line-height: 60px;
     height: 60px;
+    transition: @anime;
     span {
       top: 14px;
       box-shadow: 0 10px 0 1px @red,0 16px 0 1px @red,0 22px 0 1px @red;
     }
-    &:hover span {
-      box-shadow: 0 10px 0 1px @blue,0 16px 0 1px @blue,0 22px 0 1px @blue;
+    &:hover { 
+      transition: @anime;
+      span {
+        box-shadow: 0 10px 0 1px @blue,0 16px 0 1px @blue,0 22px 0 1px @blue;
+      }
     }
   }
   section.left-small {
@@ -207,7 +225,7 @@ nav.tab-bar {
 }
 
 #page-content {
-  padding: 80px 0 @footerHeight 0;
+  padding: 100px 0 @footerHeight 0;
   margin-bottom: 100px;
 }
 
@@ -224,7 +242,7 @@ nav.tab-bar {
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: hidden;
-    transition: all 200ms ease-in-out;
+    transition: @anime;
     &.scalability {
       background: @scalability;
       border-radius: @tgbr 0 0 0;
@@ -234,6 +252,7 @@ nav.tab-bar {
       }
       & a:before {
         content: "Build a Typesafe Reactive Platform App that scales!";
+        padding: 55px 30px;
       }
     }
     &.productivity {
@@ -245,6 +264,7 @@ nav.tab-bar {
       }
       & a:before {
         content: "Increase your productivity with features like auto-recompile, type inference, and case classes";
+        padding: 45px 30px;
       }
     }
     &.modernize {
@@ -256,17 +276,19 @@ nav.tab-bar {
       }
       & a:before {
         content: "Build HTML5, mobile, and big data apps using frameworks designed for it";
+        padding: 45px 30px;
       }
     }
     &.quality {
-      background: @quality;
+      background: @agility;
       border-radius: 0 0 @tgbr 0;
       &:hover {
-        background: darken(@quality, 5%);
+        background: darken(@agility, 5%);
         background-color: @navy;
       }
       & a:before {
         content: "Deliver higher quality releases more frequently";
+        padding: 55px 30px;
       }
     }
     a {
@@ -278,12 +300,13 @@ nav.tab-bar {
       font-size: 18px;
       text-shadow: 1px 1px 0px rgba(0, 0, 0, .5);
       overflow: hidden;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
+      -webkit-transition: @anime;
+      -moz-transition: @anime;
+      transition: @anime;
       -webkit-backface-visibility: hidden;
       -moz-backface-visibility: hidden;
       backface-visibility: hidden;
+      line-height: 1.2em;
       &:before {
         position: absolute;
         width: 100%;
@@ -291,9 +314,9 @@ nav.tab-bar {
         width: 100%;
         padding: 30px 30px;
         font-size: 18px;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        transition: all 0.3s;
+        -webkit-transition: @anime;
+        -moz-transition: @anime;
+        transition: @anime;
         left: -1000px;
         top: 0;
       }
@@ -301,11 +324,11 @@ nav.tab-bar {
         display: inline-block;
         width: 100%;
         height: 100%;
-        -webkit-transition: all 0.3s;
+        -webkit-transition: @anime;
         -webkit-backface-visibility: hidden;
-        -moz-transition: all 0.3s;
+        -moz-transition: @anime;
         -moz-backface-visibility: hidden;
-        transition: all 0.3s;
+        transition: @anime;
         backface-visibility: hidden;
         overflow: hidden;
       }
@@ -318,8 +341,20 @@ nav.tab-bar {
       &:hover:before {
         left: 0;
       }
-
     }
+    &.go-circle {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        top: 50%;
+        border: 2px solid @white-ltr;
+        margin: -30px 0 0 -30px;
+        border-radius: 200px;
+        line-height: 56px;
+        
+    }
+
   }
 }
 
@@ -338,34 +373,40 @@ ul.off-canvas-list {
   li {
     a {
       font-weight: 400;
+      border: 1px solid @slate;
+      padding: 10px;;
     }
     &.scalability strong a {
       background-color: @scalability;
       color: @white;
     }
     &.scalability a {
-      color: @scalability;
+      color: @white;
+      background-color: @scalability;
     }
     &.productivity strong a {
       background-color: @productivity;
       color: @white;
     }
     &.productivity a {
-      color: @productivity;
+      color: @white;
+      background-color: @productivity;
     }
     &.modernize strong a {
       background-color: @modernize;
       color: @white;
     }
     &.modernize a {
-      color: @modernize;
+      color: @white;
+      background-color: @modernize;
     }
-    &.quality strong a {
-      background-color: @quality;
+    &.agility strong a {
+      background-color: @agility;
       color: @white;
     }
-    &.quality a {
-      color: @quality;
+    &.agility a {
+      color: @white;
+      background-color: @agility;
     }
     &.convince strong a {
       background-color: @slate-ltr;
@@ -417,7 +458,7 @@ article {
 
 article.scalability {
   h1,h2,h3 {
-    color: @scalability;
+    color: @navy;
   }
   .btn {
     background-color: @scalability;
@@ -428,6 +469,7 @@ article.scalability {
   }
   nav {
     color: @scalability;
+    border-bottom: 1px solid @scalability;
     a {
       color: @scalability;
     }
@@ -436,7 +478,7 @@ article.scalability {
 
 article.productivity {
   h1,h2,h3 {
-    color: @productivity;
+    color: @navy;
   }
   .btn {
     background-color: @productivity;
@@ -447,8 +489,49 @@ article.productivity {
   }
   nav {
     color: @productivity;
+    border-bottom: 1px solid @productivity;
     a {
       color: @productivity;
+    }
+  }
+}
+
+article.modernize {
+  h1,h2,h3 {
+    color: @navy;
+  }
+  .btn {
+    background-color: @modernize;
+    border-bottom-color: darken(@modernize, 10%); 
+    &:hover {
+      background-color: darken(@modernize, 5%);
+    }
+  }
+  nav {
+    color: @modernize;
+    border-bottom: 1px solid @modernize;
+    a {
+      color: @modernize;
+    }
+  }
+}
+
+article.agility {
+  h1,h2,h3 {
+    color: @navy;
+  }
+  .btn {
+    background-color: @agility;
+    border-bottom-color: darken(@agility, 10%); 
+    &:hover {
+      background-color: darken(@agility, 5%);
+    }
+  }
+  nav {
+    color: @agility;
+    border-bottom: 1px solid @agility;
+    a {
+      color: @agility;
     }
   }
 }
@@ -468,18 +551,23 @@ section#support {
   left: 0;
   z-index: 1000;
   background: rgba(83,205,236, 0.9);
+  h1 {
+    font-size: 2em;
+    margin: 0 0 0.7em 0;
+  }
 }
 
 /* Overlay closing cross */
 .overlay .overlay-close {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
+  border: 10px solid @navy;
+  border-radius: 200px;
   position: absolute;
   right: 20px;
   top: 20px;
   overflow: hidden;
-  border: none;
-  background: url(../images/cross.png) no-repeat center center;
+  background: @navy url(../images/cross.png) no-repeat center center;
   text-indent: 200%;
   color: transparent;
   outline: none;
@@ -556,7 +644,7 @@ form {
     padding: 4px 10px;
     font-size: 1em;
     background-color: @white-ltr;
-    color: @blue-text;
+    color: @navy;
     border: 1px solid @blue-dkr;
     border-radius: @br;
   }
