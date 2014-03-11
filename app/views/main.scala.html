@@ -17,8 +17,8 @@
 </head>
 <body>
     <div class="off-canvas-wrap">
+        
         <div class="inner-wrap">
-
 
             <nav class="tab-bar">
               <section class="left-small">
@@ -30,7 +30,6 @@
               </section>
 
               <section class="support">
-                
                 <span id="trigger-overlay"><svg class="support-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" enable-background="new 0 0 400 400"><path class="support-icon-fill" fill="#fff" d="M197.4 6.1c-107.1 1.4-192.8 89.4-191.3 196.5 1.4 107.1 89.4 192.8 196.5 191.3 107.1-1.4 192.8-89.4 191.3-196.5-1.4-107.1-89.4-192.8-196.5-191.3zm.3 25.3c28.9-.4 56.2 6.5 80.1 19l-26.1 43.5c-15.6-7.6-33.2-11.9-51.7-11.9-18.6 0-36.1 4.3-51.8 11.9l-26.1-43.5c22.7-11.8 48.4-18.7 75.6-19zm-103.8 220.4l-43.5 26.1c-11.8-22.6-18.7-48.3-19-75.6-.4-28.9 6.5-56.2 19-80.1l43.5 26.1c-7.6 15.6-11.9 33.2-11.9 51.7-.1 18.6 4.2 36.1 11.9 51.8zm108.4 116.8c-28.9.4-56.2-6.5-80.1-19l26.1-43.5c15.6 7.6 33.2 11.9 51.7 11.9 18.6 0 36.1-4.3 51.7-11.9l26.1 43.5c-22.6 11.8-48.3 18.7-75.5 19zm-2.3-75.8c-51.2 0-92.8-41.5-92.8-92.8s41.5-92.8 92.8-92.8 92.8 41.5 92.8 92.8-41.6 92.8-92.8 92.8zm106.1-41c7.6-15.6 11.9-33.2 11.9-51.8 0-18.6-4.3-36.1-11.9-51.7l43.5-26.1c11.8 22.6 18.7 48.3 19 75.6.4 28.9-6.5 56.2-19 80.1l-43.5-26.1z"/></svg></span>
               </section>
             </nav>
@@ -56,16 +55,24 @@
               </ul>
 
             </aside>
+            
             <div class="row">
                 <div class="small-12 large-12 columns">
                     @content
                 </div>
             </div>
             
+            <footer class="site-footer">
+                <a href="http://www.typesafe.com">@components.logo()</a>
+                <p>©2014</p>
+                <img class="reactive-graphic" src="@routes.Assets.at("images/reactive-applications.png")">
+            </footer>
+            
             <!-- close the off-canvas menu -->
             <a class="exit-off-canvas"></a>
 
-        </div>
+        </div><!--inner wrap-->
+        
         <!-- open/close -->
         <div class="overlay overlay-hugeinc">
             <button type="button" class="overlay-close">Close</button>
@@ -94,8 +101,9 @@
                     </form>
                 </div>
             </section>
-        </div>
-    </div>
+        </div><!--form overlay-->
+    
+    </div><!--off canvas wrap-->
     
     <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
     <script type="text/javascript" src='@routes.Assets.at("javascripts/vendor/fastclick.js")'></script>

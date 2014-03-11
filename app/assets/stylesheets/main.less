@@ -48,15 +48,23 @@
 @quality:        @red-text;
 
 
-
+@footerHeight: 60px;
 
 @br: 2px;
 
+@tgbr: 10px;
+
 @typesafe-fonts: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+
+html, body {
+  height: 100%
+}
+
 body {
-  background: @white-ltr;
+  background: @white-dkr;
   font-family: @typesafe-fonts;
   color: @navy;
+
 }
 h1,h2,h3,h4,h5,h6 {
   color: @navy;
@@ -75,29 +83,66 @@ p {
   padding: 0 30px;
   color: @white;
   border-bottom: 2px solid @red-text;
+  position: relative;
+  overflow: hidden;
   &:hover {
     background-color: @red-dkr;
     color: @white;
   }
   &:after {
     content: " >";
-    right: -200px;
+    right: -30px;
+    opacity: 0;
     position: absolute;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
   }
   &:hover:after {
-    right: 30px;
+    right: 10px;
+    opacity: 1;
   }
 
 }
 
 
-
-
+.off-canvas-wrap {
+  height: 100%;
+  border: 0px orange solid
+}
 .inner-wrap {
   min-height: 100%;
+  background: @white-ltr;
+  border: 0px solid green;
+
+  .site-footer {
+    height: @footerHeight;
+    background: @white-dkr;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-size: 10%;
+    text-align: center;
+    .ts-logo {
+      height: 30px;
+      margin-top: 15px;
+      margin-bottom: 0px;
+
+
+    }
+    .reactive-graphic {
+      position: absolute;
+      height: 100px;
+      top: -50px;
+      right: -50px;
+    }
+    p {
+      color: @white;
+      font-size: .8em;
+      margin: 0;
+      display: none
+    }
+  }
 }
 nav.tab-bar {
   background: @navy;
@@ -139,20 +184,31 @@ nav.tab-bar {
     position: absolute;
     top: 10px;
     right: 10px;
-    height: 60px;
-    line-height: 60px;
-    .support-icon {
-      width: 30px;
-      height: 30px;
+
+    #trigger-overlay {
+      cursor: pointer;
+      background: @blue;
+      width: 60px;
+      height: 60px;
+      display: block;
+      border-radius: 200px;
+      border: 10px solid @navy;
+
+        .support-icon {
+        width: 30px;
+        height: 30px;
+        top: 15px;
+        left: 15px;
+        position: absolute;
+      }
     }
+    
   }
-  
-
-
 }
 
 #page-content {
-  padding: 80px 0 200px 0;
+  padding: 80px 0 @footerHeight 0;
+  margin-bottom: 100px;
 }
 
 .track-grid {
@@ -171,7 +227,7 @@ nav.tab-bar {
     transition: all 200ms ease-in-out;
     &.scalability {
       background: @scalability;
-      border-radius: 30px 0 0 0;
+      border-radius: @tgbr 0 0 0;
       &:hover {
         background: darken(@scalability, 5%);
         background-color: @navy;
@@ -182,7 +238,7 @@ nav.tab-bar {
     }
     &.productivity {
       background: @productivity;
-      border-radius: 0 30px 0 0;
+      border-radius: 0 @tgbr 0 0;
       &:hover {
         background: darken(@productivity, 5%);
         background-color: @navy;
@@ -193,7 +249,7 @@ nav.tab-bar {
     }
     &.modernize {
       background: @modernize;
-      border-radius: 0 0 0 30px;
+      border-radius: 0 0 0 @tgbr;
       &:hover {
         background: darken(@modernize, 5%);
         background-color: @navy;
@@ -204,7 +260,7 @@ nav.tab-bar {
     }
     &.quality {
       background: @quality;
-      border-radius: 0 0 30px 0;
+      border-radius: 0 0 @tgbr 0;
       &:hover {
         background: darken(@quality, 5%);
         background-color: @navy;
@@ -319,7 +375,6 @@ ul.off-canvas-list {
 }
 article footer {
   margin: 30px 0;
-  text-align: right;
 }
 article h1 {
   font-size: 1.8em;
@@ -403,9 +458,7 @@ section#support {
   margin-top: 100px;
 }
 
-#trigger-overlay {
-  cursor: pointer;
-}
+
 /* Overlay style */
 .overlay {
   position: fixed;
