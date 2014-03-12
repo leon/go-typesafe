@@ -1,0 +1,738 @@
+@red:           #F16665;
+@red-dkr:       #E25758;
+@red-ltr:       #F6ACAC;
+@red-text:      #D64546;
+@blue:          #53CDEC;
+@blue-dkr:      #42b8d7;
+@blue-ltr:      #c3eef8;
+@blue-text:     #19aacf;
+@blue-ts:       #7BDCF5;
+@blue-teal:     #187086;
+@navy:          #103a51;
+@slate:         #364550;
+@slate-dkr:     #2a363e;
+@slate-ltr:     #3e515e;
+@slate-text:    #28353e;
+@slate-tt:      #354854;
+@grey:          #899CA9;
+@grey-dkr:      #6F7F89;
+@grey-ltr:      #8BA1B0;
+@grey-text:     #778a99;
+@white:         #ffffff;
+@white-ltr:     #f0f3f6;
+@white-dkr:     #c2d2dc;
+@play-green:    #92d13d;
+@scala-red:     #DC322F;
+@akka-blue:     #2e6d82;
+
+@green:         #a1cd43;
+@green-dkr:     darken(@green, 5%);
+@green-ltr:     lighten(@green, 5%);
+
+@yellow:         #ffc40c;
+@yellow-dkr:     darken(@yellow, 5%);
+@yellow-ltr:     lighten(@yellow, 5%);
+
+
+@purple:         #821e70;
+@purple-dkr:     #621654;
+@purple-ltr:     #9b4b8d;
+
+@rasberry:       #ce3045;
+@rasberry-dkr:   #9b2434;
+@rasberry-ltr:   #d8596a;
+
+@scalability:    @blue;
+@productivity:   @blue;
+@modernize:      @blue;
+@agility:        @blue;
+
+@linkcolor:      @blue-text;
+
+@footerHeight: 100px;
+
+@br: 2px;
+
+@tgbr: 10px;
+
+@typesafe-fonts: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+
+@anime: all 300ms ease-in-out;
+
+html, body {
+  height: 100%
+}
+
+body {
+  background: @white-dkr;
+  font-family: @typesafe-fonts;
+  color: @navy;
+  font-smoothing: antialiased;
+  -webkit-font-size-adjust: none;
+  text-rendering: optimizeLegibility;
+
+}
+h1,h2,h3,h4,h5,h6 {
+  color: @navy;
+  line-height: 1.1em;
+  font-weight: 400;
+  font-family: @typesafe-fonts;
+}
+p {
+  line-height: 1.4em;
+}
+.anchor-jump {
+  margin: 0 0 60px 0;
+  height: 1px;
+  display: block;
+}
+.btn {
+  display: inline-block;
+  border-radius: @br;
+  background-color: @red;
+  line-height: 40px;
+  padding: 0 30px;
+  color: @white;
+  border-bottom: 2px solid @red-text;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, .2);
+  width: 100%;
+  text-align: center;
+  transition: @anime;
+  text-transform: uppercase;
+  &:hover {
+    background-color: @red-dkr;
+    color: @white;
+    transition: @anime;
+  }
+  &:after {
+    content: "\232A";
+    right: -30px;
+    opacity: 0;
+    position: absolute;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  &:hover:after {
+    right: 10px;
+    opacity: 1;
+  }
+
+}
+
+
+.off-canvas-wrap {
+  height: 100%;
+  border: 0px orange solid
+}
+.inner-wrap {
+  min-height: 100%;
+  background: @white-ltr;
+  border: 0px solid green;
+
+  .site-footer {
+    height: @footerHeight;
+    background: @navy;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-size: 10%;
+    text-align: left;
+    box-shadow: 0 -3px 0 rgba(128,128,128,.1);
+    .ts-logo {
+      height: 20%;
+      width: 20%;
+      margin: 30px 10px 0 0;
+      float: left;
+
+
+    }
+    .reactive-graphic {
+      position: absolute;
+      height: 200px;
+      top: -110px;
+      right: -100px;
+    }
+    p {
+      color: @white;
+      font-size: .8em;
+      margin: 0;
+      display: none;
+
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      margin-top: 32px;
+      float: left;
+      li {
+        padding: 0;
+        float: left;
+        margin-right: 10px;
+        a {
+          color: @white;
+          transition: @anime;
+          &:before {
+            content: "| ";
+            margin-right: 5px;
+          }
+          &:hover {
+            color: @blue;
+            transition: @anime;
+            &:before {
+              color: @white;
+            }
+          }
+        }
+        &:last-child a:after {
+          content: "";
+        }
+      }
+    }
+  }
+}
+nav.tab-bar {
+  background: @navy;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  height: 60px;
+  line-height: 60px;
+  box-shadow: 0 0 8px rgba(0,0,0,.5);
+  h1 a {
+    font-weight: 400;
+    color: @white;
+    text-transform: titlecase;
+    line-height: 60px;
+    height: 60px;
+    transition: @anime;
+    &:hover {
+      color: @blue;
+      transition: @anime;
+    }
+  }
+  a.menu-icon {
+    line-height: 60px;
+    height: 60px;
+    transition: @anime;
+    span {
+      top: 14px;
+      box-shadow: 0 10px 0 1px @red,0 16px 0 1px @red,0 22px 0 1px @red;
+    }
+    &:hover { 
+      transition: @anime;
+      span {
+        box-shadow: 0 10px 0 1px @blue,0 16px 0 1px @blue,0 22px 0 1px @blue;
+      }
+    }
+  }
+  section.left-small {
+    line-height: 60px;
+    height: 60px;
+  }
+  section.tab-bar-section {
+    line-height: 60px;
+    height: 60px;
+  }
+  section.support {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    #trigger-overlay {
+      cursor: pointer;
+      background: @blue;
+      width: 60px;
+      height: 60px;
+      display: block;
+      border-radius: 200px;
+      border: 10px solid @navy;
+
+        .support-icon {
+        width: 30px;
+        height: 30px;
+        top: 15px;
+        left: 15px;
+        position: absolute;
+      }
+    }
+    
+  }
+}
+
+#page-content {
+  padding: 100px 0 @footerHeight 0;
+  margin-bottom: 100px;
+}
+
+.track-grid {
+  text-align: center;
+
+  li {
+    position: relative;
+    background-color: @navy;
+    vertical-align: middle;
+    color: @white;
+    padding-bottom: 0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: @anime;
+    border: 1px solid @white-ltr;
+    &.scalability {
+      background: @blue;
+      border-radius: @tgbr 0 0 0;
+      &:hover {
+        background: darken(@scalability, 5%);
+        background-color: @navy;
+      }
+      & a:before {
+        content: "Build a Typesafe Reactive Platform App that scales!";
+        padding: 55px 30px;
+      }
+    }
+    &.productivity {
+      background: @blue;
+      border-radius: 0 @tgbr 0 0;
+      &:hover {
+        background: darken(@productivity, 5%);
+        background-color: @navy;
+      }
+      & a:before {
+        content: "Increase your productivity with features like auto-recompile, type inference, and case classes";
+        padding: 45px 30px;
+      }
+    }
+    &.modernize {
+      background: @blue;
+      border-radius: 0 0 0 @tgbr;
+      &:hover {
+        background: darken(@modernize, 5%);
+        background-color: @navy;
+      }
+      & a:before {
+        content: "Build HTML5, mobile, and big data apps using frameworks designed for it";
+        padding: 45px 30px;
+      }
+    }
+    &.quality {
+      background: @blue;
+      border-radius: 0 0 @tgbr 0;
+      &:hover {
+        background: darken(@agility, 5%);
+        background-color: @navy;
+      }
+      & a:before {
+        content: "Deliver higher quality releases more frequently";
+        padding: 55px 30px;
+      }
+    }
+    a {
+      color: @white;
+      display: inline-block;
+      width: 100%;
+      padding: 30px 30px;
+      font-size: 18px;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, .5);
+      overflow: hidden;
+      -webkit-transition: @anime;
+      -moz-transition: @anime;
+      transition: @anime;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+      line-height: 1.2em;
+      .svg-icon {
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin: 0 auto 10px auto;
+        padding: 0;
+      }
+      &:before {
+        position: absolute;
+        width: 100%;
+        display: inline-block;
+        width: 100%;
+        padding: 30px 30px;
+        font-size: 18px;
+        -webkit-transition: @anime;
+        -moz-transition: @anime;
+        transition: @anime;
+        left: -1000px;
+        top: 0;
+      }
+      span {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: @anime;
+        -webkit-backface-visibility: hidden;
+        -moz-transition: @anime;
+        -moz-backface-visibility: hidden;
+        transition: @anime;
+        backface-visibility: hidden;
+        overflow: hidden;
+        text-align: center;
+      }
+      &:hover span {
+        -webkit-transform: translateX(300%);
+        -moz-transform: translateX(300%);
+        -ms-transform: translateX(300%);
+        transform: translateX(300%);
+      }
+      &:hover:before {
+        left: 0;
+      }
+    }
+    &.go-circle {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        top: 50%;
+        border: 2px solid @white-ltr;
+        margin: -30px 0 0 -30px;
+        border-radius: 200px;
+        line-height: 56px;
+        
+    }
+
+  }
+}
+
+
+
+.left-off-canvas-menu {
+  background-color: @slate;
+}
+.move-right {
+  a.exit-off-canvas, a.exit-off-canvas:hover {
+  background-color: transparent;
+  }
+}
+
+ul.off-canvas-list {
+  li {
+    a {
+      font-weight: 400;
+      background: @slate;
+      border: none;
+      border-top: 1px solid @slate-ltr;
+      border-bottom: 1px solid @slate-text;
+      padding: 10px;
+      text-transform: uppercase;
+      font-size: .9em;
+      transition: @anime;
+      &:hover {
+        transition:@anime;
+        background: @blue;
+        border-left: 0px solid @red; 
+      }
+      .svg-icon {
+        width: 25px;
+        height: 25px;
+        float: right;
+      }
+    }
+    &.scalability strong a {
+      color: @white;
+    }
+    &.scalability a {
+      color: @white;
+    }
+    &.productivity strong a {
+      color: @white;
+    }
+    &.productivity a {
+      color: @white;
+    }
+    &.modernize strong a {
+      color: @white;
+    }
+    &.modernize a {
+      color: @white;
+    }
+    &.agility strong a {
+      color: @white;
+    }
+    &.agility a {
+      color: @white;
+    }
+    &.convince a {
+      background-color: @slate-ltr;
+      color: @white;
+    }
+  }
+}
+article footer {
+  margin: 30px 0;
+}
+article h1 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+article {
+  h1,h2,h3 {
+    color: @navy;
+  }
+  nav {
+    display: inline-block;
+    color: @navy;
+    text-transform: uppercase;
+    margin: 0 0 1em 0;
+    padding: 0 0 1em 0;
+    width: 100%;
+    border-bottom: 1px solid @white-dkr;
+    .svg-icon {
+      float: left;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    a {
+      color: @navy;
+      line-height: 40px;
+      &:after {
+        content: "\232A";
+        margin: 0 0 0 15px;
+
+      }
+      &:last-child {
+        &:after {
+          content: "";
+          margin: 0;
+        }
+      }
+      &.current {
+        font-weight: 400;
+      }
+    }
+  }
+  
+}
+
+
+article.scalability {
+  h1,h2,h3 {
+    color: @navy;
+  }
+  .btn {
+    background-color: @scalability;
+    border-bottom-color: darken(@scalability, 10%); 
+    &:hover {
+      background-color: darken(@scalability, 5%);
+    }
+  }
+  nav {
+    color: @scalability;
+    border-bottom: 1px solid @scalability;
+    a {
+      color: @scalability;
+    }
+  }
+}
+
+article.productivity {
+  h1,h2,h3 {
+    color: @navy;
+  }
+  .btn {
+    background-color: @productivity;
+    border-bottom-color: darken(@productivity, 10%); 
+    &:hover {
+      background-color: darken(@productivity, 5%);
+    }
+  }
+  nav {
+    color: @productivity;
+    border-bottom: 1px solid @productivity;
+    a {
+      color: @productivity;
+    }
+  }
+}
+
+article.modernize {
+  h1,h2,h3 {
+    color: @navy;
+  }
+  .btn {
+    background-color: @modernize;
+    border-bottom-color: darken(@modernize, 10%); 
+    &:hover {
+      background-color: darken(@modernize, 5%);
+    }
+  }
+  nav {
+    color: @modernize;
+    border-bottom: 1px solid @modernize;
+    a {
+      color: @modernize;
+    }
+  }
+}
+
+article.agility {
+  h1,h2,h3 {
+    color: @navy;
+  }
+  .btn {
+    background-color: @agility;
+    border-bottom-color: darken(@agility, 10%); 
+    &:hover {
+      background-color: darken(@agility, 5%);
+    }
+  }
+  nav {
+    color: @agility;
+    border-bottom: 1px solid @agility;
+    a {
+      color: @agility;
+    }
+  }
+}
+
+
+section#support {
+  margin-top: 100px;
+}
+
+
+/* Overlay style */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(83,205,236, 0.9);
+  h1 {
+    font-size: 2em;
+    margin: 0 0 0.7em 0;
+  }
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+  width: 40px;
+  height: 40px;
+  border: 10px solid @navy;
+  border-radius: 200px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  overflow: hidden;
+  background: @navy url(../images/cross.png) no-repeat center center;
+  text-indent: 200%;
+  color: transparent;
+  outline: none;
+  z-index: 1000;
+}
+
+/* Effects */
+.overlay-hugeinc {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.overlay-hugeinc.open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.overlay-hugeinc nav {
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+}
+
+.overlay-hugeinc nav ul {
+  opacity: 0.4;
+  -webkit-transform: translateY(-25%) rotateX(35deg);
+  transform: translateY(-25%) rotateX(35deg);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.overlay-hugeinc.open nav ul {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+.overlay-hugeinc.close nav ul {
+  -webkit-transform: translateY(25%) rotateX(-35deg);
+  transform: translateY(25%) rotateX(-35deg);
+}
+
+@media screen and (max-height: 30.5em) {
+  .overlay nav {
+    height: 70%;
+    font-size: 34px;
+  }
+  .overlay ul li {
+    min-height: 34px;
+  }
+}
+
+
+
+
+form {
+  text-align: left;
+  max-width: 680px;
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+
+  input[type="text"],
+  textarea {
+    display: block;
+    width: 300px;
+    margin: 0 auto .5em auto;
+    height: 40px;
+    line-height: 30px;
+    padding: 4px 10px;
+    font-size: 1em;
+    background-color: @white-ltr;
+    color: @navy;
+    border: 1px solid @blue-dkr;
+    border-radius: @br;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  fieldset input[type="text"] {
+    float: left;
+    margin: 0 2% .5em 2%;
+    width: 48%;
+  }
+
+  fieldset input[type="text"]:first-child {
+    margin: 0 2% .5em 0;
+  }
+
+  fieldset input[type="text"]:last-child {
+    margin: 0 0 .5em 2%;
+  }
+
+  fieldset textarea {
+    width: 100%;
+    margin: 0 0 .5em 0%;
+  }
+
+}
+

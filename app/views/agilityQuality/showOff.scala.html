@@ -1,0 +1,27 @@
+@(message: String)
+
+@main("Scalalbity Show Off") {
+
+    <article id="page-content" class="row agility show">
+        <div class="small-11 medium-9 large-8 small-centered columns">
+            <nav>
+                @components.agile()
+                <a>Agility & Quality</a>
+                <a class="current">Show Off</a>
+            </nav>
+            <h1>Deliver higher quality releases more frequently.</h1>
+            <p>Here is how to get set up:</p>
+            <ol>
+                <li>Download the <a href="#">COntinuous Quality Activator template</a></li>
+                <li>Launch Activator</li>
+                <li>Follow the instruction in the tutorial</li>
+            </ol>
+            <img src="@routes.Assets.at("images/chrome-activator.png")">
+            <footer>
+                <a href="@routes.Application.agilityQualityGetProof()" class="btn arrow-right">Get Proof</a>
+            </footer>
+        </div>
+    </article>
+
+
+}

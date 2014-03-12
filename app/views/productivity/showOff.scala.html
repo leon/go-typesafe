@@ -1,0 +1,27 @@
+@(message: String)
+
+@main("Scalalbity Show Off") {
+
+    <article id="page-content" class="row productivity show">
+        <div class="small-11 medium-9 large-8 small-centered columns">
+            <nav>
+                @components.productivity()
+                <a>Productivity</a>
+                <a class="current">Show Off</a>
+            </nav>
+            <h1>Increase your productivity with features like auto-recompile, type inference, and case classes.</h1>
+            <p>Here is how to get set up:</p>
+            <ol>
+                <li>Download the <a href="#">Productivity Matters Activator template</a></li>
+                <li>Launch Activator</li>
+                <li>Follow the instruction in the tutorial</li>
+            </ol>
+            <img src="@routes.Assets.at("images/chrome-activator.png")">
+            <footer>
+                <a href="@routes.Application.scalabilityGetProof()" class="btn arrow-right">Now lets get ready to show off</a>
+            </footer>
+        </div>
+    </article>
+
+
+}
