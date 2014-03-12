@@ -43,9 +43,11 @@
 @rasberry-ltr:   #d8596a;
 
 @scalability:    @blue;
-@productivity:   @red;
-@modernize:      @blue-text;
-@agility:        @red-text;
+@productivity:   @blue;
+@modernize:      @blue;
+@agility:        @blue;
+
+@linkcolor:      @blue-text;
 
 @footerHeight: 100px;
 
@@ -418,44 +420,50 @@ ul.off-canvas-list {
   li {
     a {
       font-weight: 400;
-      border: 1px solid @slate;
+      background: @slate;
+      border: none;
+      border-top: 1px solid @slate-ltr;
+      border-bottom: 1px solid @slate-text;
       padding: 10px;
       text-transform: uppercase;
       font-size: .9em;
+      transition: @anime;
+      &:hover {
+        transition:@anime;
+        background: @blue;
+        border-left: 0px solid @red; 
+      }
+      .svg-icon {
+        width: 25px;
+        height: 25px;
+        float: right;
+      }
     }
     &.scalability strong a {
-      background-color: @scalability;
       color: @white;
     }
     &.scalability a {
       color: @white;
-      background-color: @scalability;
     }
     &.productivity strong a {
-      background-color: @productivity;
       color: @white;
     }
     &.productivity a {
       color: @white;
-      background-color: @productivity;
     }
     &.modernize strong a {
-      background-color: @modernize;
       color: @white;
     }
     &.modernize a {
       color: @white;
-      background-color: @modernize;
     }
     &.agility strong a {
-      background-color: @agility;
       color: @white;
     }
     &.agility a {
       color: @white;
-      background-color: @agility;
     }
-    &.convince strong a {
+    &.convince a {
       background-color: @slate-ltr;
       color: @white;
     }
@@ -481,8 +489,15 @@ article {
     padding: 0 0 1em 0;
     width: 100%;
     border-bottom: 1px solid @white-dkr;
+    .svg-icon {
+      float: left;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
     a {
       color: @navy;
+      line-height: 40px;
       &:after {
         content: "\232A";
         margin: 0 0 0 15px;
