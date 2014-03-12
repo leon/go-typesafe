@@ -51,7 +51,7 @@
 
 @br: 2px;
 
-@tgbr: 4px;
+@tgbr: 10px;
 
 @typesafe-fonts: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 
@@ -280,8 +280,9 @@ nav.tab-bar {
     backface-visibility: hidden;
     overflow: hidden;
     transition: @anime;
+    border: 1px solid @white-ltr;
     &.scalability {
-      background: @scalability;
+      background: @blue;
       border-radius: @tgbr 0 0 0;
       &:hover {
         background: darken(@scalability, 5%);
@@ -293,7 +294,7 @@ nav.tab-bar {
       }
     }
     &.productivity {
-      background: @productivity;
+      background: @blue;
       border-radius: 0 @tgbr 0 0;
       &:hover {
         background: darken(@productivity, 5%);
@@ -305,7 +306,7 @@ nav.tab-bar {
       }
     }
     &.modernize {
-      background: @modernize;
+      background: @blue;
       border-radius: 0 0 0 @tgbr;
       &:hover {
         background: darken(@modernize, 5%);
@@ -317,7 +318,7 @@ nav.tab-bar {
       }
     }
     &.quality {
-      background: @agility;
+      background: @blue;
       border-radius: 0 0 @tgbr 0;
       &:hover {
         background: darken(@agility, 5%);
@@ -329,11 +330,10 @@ nav.tab-bar {
       }
     }
     a {
-      
       color: @white;
       display: inline-block;
       width: 100%;
-      padding: 60px 30px;
+      padding: 30px 30px;
       font-size: 18px;
       text-shadow: 1px 1px 0px rgba(0, 0, 0, .5);
       overflow: hidden;
@@ -344,6 +344,13 @@ nav.tab-bar {
       -moz-backface-visibility: hidden;
       backface-visibility: hidden;
       line-height: 1.2em;
+      .svg-icon {
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin: 0 auto 10px auto;
+        padding: 0;
+      }
       &:before {
         position: absolute;
         width: 100%;
@@ -368,6 +375,7 @@ nav.tab-bar {
         transition: @anime;
         backface-visibility: hidden;
         overflow: hidden;
+        text-align: center;
       }
       &:hover span {
         -webkit-transform: translateX(300%);

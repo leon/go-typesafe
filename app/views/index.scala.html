@@ -16,10 +16,18 @@
         <div class="row">
             <div class="small-11 medium-9 large-8 small-centered columns">
                 <ul class="small-block-grid-2 track-grid">
-                    <li class="scalability"><a href="@routes.Application.scalabilityShowOff()"><span>I Need Scalability</span></a></li>
-                    <li class="productivity"><a href="@routes.Application.productivityShowOff()"><span>I Need Productivity</span></a></li>
-                    <li class="modernize"><a href="@routes.Application.modernizeShowOff()"><span>I Need To Modernize</span></a></li>
-                    <li class="quality"><a href="@routes.Application.agilityQualityShowOff()"><span>I Need Agility & Quality</span></a></li>
+                    <li class="scalability">
+                        <a href="@routes.Application.scalabilityShowOff()"><span>@components.scalability()I Need Scalability</span></a>
+                    </li>
+                    <li class="productivity">
+                        <a href="@routes.Application.productivityShowOff()"><span>@components.productivity()I Need Productivity</span></a>
+                    </li>
+                    <li class="modernize">
+                        <a href="@routes.Application.modernizeShowOff()"><span>@components.modernize()I Need To Modernize</span></a>
+                    </li>
+                    <li class="quality">
+                        <a href="@routes.Application.agilityQualityShowOff()"><span>@components.agile()I Need Agility & Quality</span></a>
+                    </li>
                     <li class="go-circle">GO</li>
                 </ul>
             </div>
