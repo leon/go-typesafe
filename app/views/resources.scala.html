@@ -1,0 +1,74 @@
+@(message: String)
+
+@main("Go Typesafe", "resources") {
+
+    <section id="page-content" class="row">
+        <div class="small-11 medium-9 large-8 small-centered columns">
+            <article>
+                <nav>
+                    @components.scalability()
+                    @components.productivity()
+                    @components.modernize()
+                    @components.agile()
+                    <a class="current" href="#">All Resources</a>
+                </nav>
+                <ul class="no-bullets jump-links">
+                    <li><a href="#case-studies">Case Studies</a></li>
+                    <li><a href="#webinars">Webinars</a></li>
+                    <li><a href="#presentations">Presentations</a></li>
+                    <li><a href="#templates">Templates</a></li>
+                </ul>
+            </article>
+            <span id="case-studies" class="anchor-jump"></span>
+            <article>
+                    <h2>Case Studies</h2>
+                    <ul class="resource-list no-bullets">
+                        <li><a href="#">This is a resource@components.productivity()@components.agile()</a></li>
+                        <li><a href="#">Another useful resource@components.scalability()@components.productivity()@components.agile()</a></li>
+                        <li><a href="#">Do you like this title@components.scalability()</a></li>
+                        <li><a href="#">I'm a helpful link@components.scalability()@components.modernize()</a></li>
+                        <li><a href="#">last but not least@components.modernize()</a></li>
+                    </ul>
+            </article>
+            <span id="webinars" class="anchor-jump"></span>
+            <article>
+                    <h2>Webinars</h2>
+                    <ul class="resource-list no-bullets">
+                        <li><a href="#">This is a resource@components.scalability()@components.productivity()</a></li>
+                        <li><a href="#">Another useful resource@components.productivity()</a></li>
+                        <li><a href="#">Do you like this title@components.scalability()@components.productivity()@components.modernize()@components.agile()</a></li>
+                        <li><a href="#">I'm a helpful link@components.productivity()@components.modernize()</a></li>
+                        <li><a href="#">last but not least@components.productivity()@components.agile()</a></li>
+                    </ul>
+            </article>
+            <span id="presentations" class="anchor-jump"></span>
+            <article>
+                    <h2>Presentations</h2>
+                    <ul class="resource-list no-bullets">
+                        <li><a href="#">This is a resource@components.productivity()@components.agile()</a></li>
+                        <li><a href="#">Another useful resource@components.scalability()@components.productivity()@components.agile()</a></li>
+                        <li><a href="#">Do you like this title@components.scalability()</a></li>
+                        <li><a href="#">I'm a helpful link@components.scalability()@components.modernize()</a></li>
+                        <li><a href="#">last but not least@components.modernize()</a></li>
+                    </ul>
+            </article>
+            <span id="templates" class="anchor-jump"></span>
+            <article>
+                    <h2>Templates</h2>
+                    <ul class="resource-list no-bullets">
+                        <li><a href="#">This is a resource@components.scalability()@components.productivity()</a></li>
+                        <li><a href="#">Another useful resource@components.productivity()</a></li>
+                        <li><a href="#">Do you like this title@components.scalability()@components.productivity()@components.modernize()@components.agile()</a></li>
+                        <li><a href="#">I'm a helpful link@components.productivity()@components.modernize()</a></li>
+                        <li><a href="#">last but not least@components.productivity()@components.agile()</a></li>
+                    </ul>
+            </article>
+            
+
+
+
+        </div>
+    </section>
+
+
+}

@@ -12,6 +12,6 @@ object Application extends Controller {
   def modernizeGetProof = Action {Ok(views.html.modernize.getProof("Modernize Get Proof"))}
   def agilityQualityShowOff = Action {Ok(views.html.agilityQuality.showOff("Agility & Quality Show Off"))}
   def agilityQualityGetProof = Action {Ok(views.html.agilityQuality.getProof("Agility & Quality Get Proof"))}
-  
   def convince = Action {Ok(views.html.convince("Convince"))}
+  def resources = Action {Ok(views.html.resources("Resources"))}
 }
