@@ -69,21 +69,24 @@
             
             <footer class="site-footer">
                 <div class="row">
-                    <div class="small-11 medium-9 large-8 small-centered columns">
-                        <a href="http://www.typesafe.com">@components.logo()</a>
+                    <div class="small-12 medium-12 large-12 small-centered columns">
+                        <span class="reactive-graphic-b">@components.platform()</span>
+                        
                         <ul>
                             <li><a href="@routes.Application.scalabilityShowOff()">Scalability</a></li>
                             <li><a href="@routes.Application.productivityShowOff()">Productivity</a></li>
                             <li><a href="@routes.Application.modernizeShowOff()">Modernize</a></li>
                             <li><a href="@routes.Application.agilityQualityShowOff()">Agility & Quality</a></li>
+                            <li><a href="@routes.Application.convince()">Convince Your Boss</a></li>
+                            <li><a href="@routes.Application.resources()">All Resources</a></li>
                         </ul>
-
+                        <a class="footer-logo" href="http://www.typesafe.com">@components.logo()</a>
                         <p>©2014</p>
                     </div>
                 </div>
                 
-                
-                <img class="reactive-graphic" src="@routes.Assets.at("images/reactive-applications.png")">
+                <span class="reactive-graphic">@components.platform()</span>
+                <!--<img class="reactive-graphic" src="@routes.Assets.at("images/reactive-platform.svg")">-->
             </footer>
             
             <!-- close the off-canvas menu -->
