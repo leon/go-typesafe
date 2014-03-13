@@ -81,6 +81,9 @@ h1,h2,h3,h4,h5,h6 {
   margin-top: 1em;
   font-weight: 400;
   font-family: @typesafe-fonts;
+  &.remove-mt {
+    margin-top: 0;
+  }
 
 }
 p {
@@ -91,6 +94,10 @@ p {
   margin: 0 0 60px 0;
   height: 1px;
   display: block;
+}
+ul.no-bullets {
+  list-style-type: none;
+  margin-left: 0;
 }
 .btn {
   display: inline-block;
@@ -427,11 +434,11 @@ ul.off-canvas-list {
     a {
       font-weight: 400;
       background: @slate;
+      color: @white;
       border: none;
       border-top: 1px solid @slate-ltr;
       border-bottom: 1px solid @slate-text;
       padding: 10px;
-      text-transform: uppercase;
       font-size: .9em;
       transition: @anime;
       &:hover {
@@ -445,33 +452,13 @@ ul.off-canvas-list {
         float: right;
       }
     }
-    &.scalability strong a {
-      color: @white;
-    }
-    &.scalability a {
-      color: @white;
-    }
-    &.productivity strong a {
-      color: @white;
-    }
-    &.productivity a {
-      color: @white;
-    }
-    &.modernize strong a {
-      color: @white;
-    }
-    &.modernize a {
-      color: @white;
-    }
-    &.agility strong a {
-      color: @white;
-    }
-    &.agility a {
-      color: @white;
-    }
-    &.convince a {
+    &.secondary a {
       background-color: @slate-ltr;
       color: @white;
+      &:hover {
+        background-color: @slate-dkr;
+        color: @red;
+      }
     }
   }
 }
@@ -493,6 +480,7 @@ article {
   }
   nav {
     display: inline-block;
+    color: @navy;
     text-transform: uppercase;
     margin: 0 0 1em 0;
     padding: 0 0 1em 0;
@@ -503,6 +491,14 @@ article {
       width: 40px;
       height: 40px;
       margin-right: 10px;
+    }
+    h2 {
+      line-height: 40px;
+      font-size: 1em;
+      margin: 0;
+      span {
+        margin-left: 10px;
+      }
     }
     a {
       color: @navy;
@@ -529,6 +525,18 @@ article {
     font-weight: 700;
     margin-top: 1em;
     color: @slate-ltr;
+  }
+}
+
+.convince article {
+  position: relative;
+
+  h2 .svg-icon {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: -130px;
+    top: 0px;
   }
 }
 

@@ -1,72 +1,81 @@
 @(message: String)
 
-@main("Go Typesafe") {
+@main("Go Typesafe", "convince") {
 
-    <article id="page-content" class="row convince">
+    <section id="page-content" class="row">
         <div class="small-11 medium-9 large-8 small-centered columns">
-            <nav>
-                @components.scalability()
-                @components.productivity()
-                @components.modernize()
-                @components.agile()
-                <a class="current" href="#">Convince Your Boss</a>
-            </nav>
-            <ul>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#scalateam">Creating Your Scala Team</a></li>
-                <li><a href="#history">The History and Longevity of Scala</a></li>
-                <li><a href="#integration">Integration of Scala with Enterprise Tools</a></li>
-                <li><a href="#ease">Ease of Scalability with Scala and Akka</a></li>
-                <li><a href="#maintaining">Maintaining Uptime and Continuous Deployment with Scala</a></li>
-                <li><a href="#effect">Effect on Developer Productivity</a></li>
-            </ul>
+            <article>
+                <nav>
+                    @components.scalability()
+                    @components.productivity()
+                    @components.modernize()
+                    @components.agile()
+                    <a class="current" href="#">Convince Your Boss</a>
+                </nav>
+                <ul class="no-bullets">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#scalateam">Creating Your Scala Team</a></li>
+                    <li><a href="#history">The History and Longevity of Scala</a></li>
+                    <li><a href="#integration">Integration of Scala with Enterprise Tools</a></li>
+                    <li><a href="#ease">Ease of Scalability with Scala and Akka</a></li>
+                    <li><a href="#maintaining">Maintaining Uptime and Continuous Deployment with Scala</a></li>
+                    <li><a href="#effect">Effect on Developer Productivity</a></li>
+                </ul>
+            </article>
             <span id="overview" class="anchor-jump"></span>
-            <h2>Overview</h2>
-            <p>You’ve done it - you’ve built a small project and managed to convince your peers that the Typesafe Reactive Platform is the way that you can solve problems related to scalability, accelerate the productivity of your team and build modern, high quality applications.  Everyone is excited to start programming with the beauty of Scala.  Only one thing left to do - convince the boss. </p> 
-            <p>Adoption of any new technology is challenging.  There are a number of factors that need to be carefully taken into account and managed properly to ensure that the costs of adoption end up being lower than the cost of non-adoption.  There are six topics that tend to be top of mind for managers and business leaders when assessing the adoption of Scala versus either other technologies or the maintenance of existing frameworks and libraries. </p>
+            <article>
+                    <h2>Overview@components.scalability()</h2>
+                    <p>You’ve done it - you’ve built a small project and managed to convince your peers that the Typesafe Reactive Platform is the way that you can solve problems related to scalability, accelerate the productivity of your team and build modern, high quality applications.  Everyone is excited to start programming with the beauty of Scala.  Only one thing left to do - convince the boss. </p> 
+                    <p>Adoption of any new technology is challenging.  There are a number of factors that need to be carefully taken into account and managed properly to ensure that the costs of adoption end up being lower than the cost of non-adoption.  There are six topics that tend to be top of mind for managers and business leaders when assessing the adoption of Scala versus either other technologies or the maintenance of existing frameworks and libraries. </p>
+            </article>
             <span id="scalateam" class="anchor-jump"></span>
-
-            <h2>Creating Your Scala Team</h2>
-            <p>Training staff on new technology or recruiting experts is a cost that doesn’t exist when a corporation sticks to their existing technologies.  As such, it’s important that the impact of the adoption of the Typesafe Reactive Platform is emphasized in any discussion of creating a Scala team.  Developers working in the Typesafe Reactive Platform will be able to create higher quality software more quickly that scales better than legacy platforms. </p> 
-            <p>In order to create a Scala team, there are two options - recruit or train.  With the popularity of Scala exploding, recruiting developers with more than a year’s worth of production Scala experience can be challenging and it is generally not cost effective or possible to staff an entire Scala team using recruitment alone.  A combination of targeted recruitment and a well structured onboarding including training, mentorship and support provides the strongest path to success.  </p>
-            <p>Training a Scala team, if done in a structured and focused way, should not be overly onerous and there are a lot of resources available.  Typesafe offers a series of 2-day corporate training options and Typesafe partners extend this to include practical, hands-on practice in the technologies along with mentorship.  Once training is complete, the Typesafe Subscription provides developers with support to ensure that they don’t get hung up with framework issues. </p>
-            <p>Executed correctly, and with the help of a Typesafe partner, an experienced developer can be brought up to competency with Scala in about 2 weeks.  Since Scala is so flexible and powerful, self learning can extend the learning curve significantly and impact the ability of the organization to fully realize the benefits of adopting the Typesafe Reactive Platform. Scala’s flexibility can be a challenge in self-led learning as inconsistencies can creep into the corporate code base.</p>
+            <article>
+                    <h2>Creating Your Scala Team@components.scalability()</h2>
+                    <p>Training staff on new technology or recruiting experts is a cost that doesn’t exist when a corporation sticks to their existing technologies.  As such, it’s important that the impact of the adoption of the Typesafe Reactive Platform is emphasized in any discussion of creating a Scala team.  Developers working in the Typesafe Reactive Platform will be able to create higher quality software more quickly that scales better than legacy platforms. </p> 
+                    <p>In order to create a Scala team, there are two options - recruit or train.  With the popularity of Scala exploding, recruiting developers with more than a year’s worth of production Scala experience can be challenging and it is generally not cost effective or possible to staff an entire Scala team using recruitment alone.  A combination of targeted recruitment and a well structured onboarding including training, mentorship and support provides the strongest path to success.  </p>
+                    <p>Training a Scala team, if done in a structured and focused way, should not be overly onerous and there are a lot of resources available.  Typesafe offers a series of 2-day corporate training options and Typesafe partners extend this to include practical, hands-on practice in the technologies along with mentorship.  Once training is complete, the Typesafe Subscription provides developers with support to ensure that they don’t get hung up with framework issues. </p>
+                    <p>Executed correctly, and with the help of a Typesafe partner, an experienced developer can be brought up to competency with Scala in about 2 weeks.  Since Scala is so flexible and powerful, self learning can extend the learning curve significantly and impact the ability of the organization to fully realize the benefits of adopting the Typesafe Reactive Platform. Scala’s flexibility can be a challenge in self-led learning as inconsistencies can creep into the corporate code base.</p>
+            </article>
             <span id="history" class="anchor-jump"></span>
 
-
-            <h2>The History and Longevity of Scala</h2>
-            <p>When making an investment in new technology, organizations need to be sure that the technology has the longevity to return that investment.  In addition, enterprises need to ensure that their technology choices are proven and stable before they adopt.  Enterprise software typically has a 10-year or longer lifetime and the technology base that it is built on needs to match.  </p> 
-            <p>Scala’s design was started in 2001 and the first release was in 2003.  The versions are stable and it is being used in a wide variety of large-scale, mission critical systems, most notably in the financial, media and social media sectors.  Scala is also enjoying a meteoric rise in popularity from below 50th rank on the TIOBE programming language rankings in 2012 to 31st in 2013 and up to 12th in the RedMonk Language Popularity Rankings.  The influential ThoughtWorks Technology Radar has put Scala into its “Adopt” category, indicating that it has crossed a threshold and they recommend adoption among enterprise software developers. </p>
-            <p>One of the best indicators of Scala’s increasing popularity is that many of the new features included in the upcoming Java 8 release have been inspired by Scala.  While the Java 8 implementations are generally simplified and do not provide the same power and benefits of the Scala implementations, the adoption of those kinds of features supports the notion that Scala’s time has come. </p>
-            <p>Scala and the Typesafe Reactive Platform have been enjoying rapid adoption in large part due to recent evolutions in hardware.  Hardware is becoming increasingly parallel, with a deep focus on increasing the aggregate multi-threaded performance of systems rather than increasing the speed of a single thread.  As such, traditional server approaches that provide developers with a single threaded abstraction and multiplex requests at the process level are becoming less and less efficient.  The Typesafe Reactive Platform allows developers to more easily create applications that have built-in multi-threading capabilities and that can fully leverage these new hardware designs.  </p>
-            <p>Adoption of Scala is low risk due to the stability and history of the platform and language, the fact that it runs on the JVM and the rising popularity of functional programming as evidenced by its incorporation in Java 8 and its alignment with modern hardware design. </p>
+            <article>
+                <h2>The History and Longevity of Scala@components.scalability()</h2>
+                <p>When making an investment in new technology, organizations need to be sure that the technology has the longevity to return that investment.  In addition, enterprises need to ensure that their technology choices are proven and stable before they adopt.  Enterprise software typically has a 10-year or longer lifetime and the technology base that it is built on needs to match.  </p> 
+                <p>Scala’s design was started in 2001 and the first release was in 2003.  The versions are stable and it is being used in a wide variety of large-scale, mission critical systems, most notably in the financial, media and social media sectors.  Scala is also enjoying a meteoric rise in popularity from below 50th rank on the TIOBE programming language rankings in 2012 to 31st in 2013 and up to 12th in the RedMonk Language Popularity Rankings.  The influential ThoughtWorks Technology Radar has put Scala into its “Adopt” category, indicating that it has crossed a threshold and they recommend adoption among enterprise software developers. </p>
+                <p>One of the best indicators of Scala’s increasing popularity is that many of the new features included in the upcoming Java 8 release have been inspired by Scala.  While the Java 8 implementations are generally simplified and do not provide the same power and benefits of the Scala implementations, the adoption of those kinds of features supports the notion that Scala’s time has come. </p>
+                <p>Scala and the Typesafe Reactive Platform have been enjoying rapid adoption in large part due to recent evolutions in hardware.  Hardware is becoming increasingly parallel, with a deep focus on increasing the aggregate multi-threaded performance of systems rather than increasing the speed of a single thread.  As such, traditional server approaches that provide developers with a single threaded abstraction and multiplex requests at the process level are becoming less and less efficient.  The Typesafe Reactive Platform allows developers to more easily create applications that have built-in multi-threading capabilities and that can fully leverage these new hardware designs.  </p>
+                <p>Adoption of Scala is low risk due to the stability and history of the platform and language, the fact that it runs on the JVM and the rising popularity of functional programming as evidenced by its incorporation in Java 8 and its alignment with modern hardware design. </p>
+            </article>
             <span id="integration" class="anchor-jump"></span>
-
-            <h2>Integration of Scala with Enterprise Tools</h2>
-            <p>As organizations build systems to run their businesses, there is a corresponding build up of infrastructure to support those systems.  This includes things like server infrastructure, monitoring systems, logging systems, development tools, debugging and performance management tools.  Scala, unlike many new technologies, has the advantage of running on the JVM and easily integrating with existing JVM infrastructure.  Developers comfortable with IntelliJ IDEA or Eclipse need only install a plugin to start working with full syntax highlighting in Scala.  Existing libraries and code bases built in Java can be directly used and integrated into new Scala projects.  Performance and monitoring tools that work with at the JVM level will work with Scala based systems and some, such as New Relic, have specific Scala integration. </p> 
-            <p>In general, any team currently using Java can switch to Scala development with minimal impact on tools and infrastructure. </p>
+            <article>
+                <h2>Integration of Scala with Enterprise Tools@components.scalability()</h2>
+                <p>As organizations build systems to run their businesses, there is a corresponding build up of infrastructure to support those systems.  This includes things like server infrastructure, monitoring systems, logging systems, development tools, debugging and performance management tools.  Scala, unlike many new technologies, has the advantage of running on the JVM and easily integrating with existing JVM infrastructure.  Developers comfortable with IntelliJ IDEA or Eclipse need only install a plugin to start working with full syntax highlighting in Scala.  Existing libraries and code bases built in Java can be directly used and integrated into new Scala projects.  Performance and monitoring tools that work with at the JVM level will work with Scala based systems and some, such as New Relic, have specific Scala integration. </p> 
+                <p>In general, any team currently using Java can switch to Scala development with minimal impact on tools and infrastructure. </p>
+            </article>
             <span id="ease" class="anchor-jump"></span>
-
-            <h2>Ease of Scalability with Scala and Akka</h2>
-            <p>As hardware becomes increasingly focused on multi-threaded performance and software increasingly centralized for larger and larger numbers of users, there is a growing need for software designers to build multi-threaded and high performance systems. Scala, Play and Akka all handle this challenge in specific ways that will increasingly become the norm for prudent application design. </p>
-            <p>Scala’s immutable-first design is expressly built to enable developers to build applications that are safely multi-threaded.  With immutable data structures, it is impossible to create race conditions.  This makes it much safer to create code that is multi-threaded and can take advantage of the hardware.  </p>
-            <p>Play’s built-in use of the Netty framework and unique push/pull model of thread management allows the framework to intelligently use threads.  Play can accept a web connection on one thread, maintain the connection, drop the thread when there is a long-running process such as a database request and allocate a new thread to service the request when the process returns.</p> 
-            <p>Akka is built for scalability and provides applications with a distributed-by-design and isolation of functionality using the actor model.  Akka provides the ability to create large scale, distributed systems with built in failure management through a supervisor heirarchy and lends itself well to …</p>
+            <article>
+                <h2>Ease of Scalability with Scala and Akka@components.scalability()</h2>
+                <p>As hardware becomes increasingly focused on multi-threaded performance and software increasingly centralized for larger and larger numbers of users, there is a growing need for software designers to build multi-threaded and high performance systems. Scala, Play and Akka all handle this challenge in specific ways that will increasingly become the norm for prudent application design. </p>
+                <p>Scala’s immutable-first design is expressly built to enable developers to build applications that are safely multi-threaded.  With immutable data structures, it is impossible to create race conditions.  This makes it much safer to create code that is multi-threaded and can take advantage of the hardware.  </p>
+                <p>Play’s built-in use of the Netty framework and unique push/pull model of thread management allows the framework to intelligently use threads.  Play can accept a web connection on one thread, maintain the connection, drop the thread when there is a long-running process such as a database request and allocate a new thread to service the request when the process returns.</p> 
+                <p>Akka is built for scalability and provides applications with a distributed-by-design and isolation of functionality using the actor model.  Akka provides the ability to create large scale, distributed systems with built in failure management through a supervisor heirarchy and lends itself well to …</p>
+            </article>
             <span id="maintaining" class="anchor-jump"></span>
-            
-            <h2>Maintaining Uptime and Continuous Deployment with Scala</h2>
-            <p>Changing Deployment Infrastructure</p>
+            <article>
+            <h2>Maintaining Uptime and Continuous Deployment with Scala@components.scalability()</h2>
+                <p>Changing Deployment Infrastructure</p>
+            </article>
             <span id="effect" class="anchor-jump"></span>
-
-            <h2>Effect on Developer Productivity</h2>
-            <p>Scala, Akka and Play provide strong benefits in terms of developer productivity.  The Scala language, in particular, requires far less boilerplate and lines of code than a typical Java application performing the same function.  This terseness can reduce code base sizes by over 50%.  There have also been studies that have shown that dense code, in the Scala style, are easier to understand.  Scala puts more of the logic on one page of text, providing developers with the ability to more easily reason about the effect of the code in front of them.  Well designed Scala also makes more use of functional code with fewer side-effects, providing developers with more opportunity for safe reuse of code segments.</p>
-            <p>The Play Framework provides strong productivity enhancements over traditional compiled web frameworks like J2EE or .NET.  Its RESTful, MVC-focused architecture means that generating a web application with persistence is extremely rapid.  In addition, its “just refresh” style of development is reminiscent of dynamic languages such as Ruby, PHP and Python while still offering the performance and maintainability benefits of compiled code.  </p>
-
+            <article>
+                <h2>Effect on Developer Productivity@components.scalability()</h2>
+                <p>Scala, Akka and Play provide strong benefits in terms of developer productivity.  The Scala language, in particular, requires far less boilerplate and lines of code than a typical Java application performing the same function.  This terseness can reduce code base sizes by over 50%.  There have also been studies that have shown that dense code, in the Scala style, are easier to understand.  Scala puts more of the logic on one page of text, providing developers with the ability to more easily reason about the effect of the code in front of them.  Well designed Scala also makes more use of functional code with fewer side-effects, providing developers with more opportunity for safe reuse of code segments.</p>
+                <p>The Play Framework provides strong productivity enhancements over traditional compiled web frameworks like J2EE or .NET.  Its RESTful, MVC-focused architecture means that generating a web application with persistence is extremely rapid.  In addition, its “just refresh” style of development is reminiscent of dynamic languages such as Ruby, PHP and Python while still offering the performance and maintainability benefits of compiled code.  </p>
+            </article>
 
 
 
         </div>
-    </article>
+    </section>
 
 
 }
