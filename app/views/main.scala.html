@@ -19,6 +19,7 @@
     <link rel="stylesheet" href='@routes.Assets.at("stylesheets/foundation.min.css")'>
     <link rel="stylesheet" href='@routes.Assets.at("stylesheets/main.css")'>
     <script type="text/javascript" src='@routes.Assets.at("javascripts/vendor/modernizr.js")'></script>
+    <link rel='shortcut icon' href='@routes.Assets.at("favicon.ico")' />
 </head>
 <body class="@context">
     <div class="off-canvas-wrap">
@@ -132,6 +133,17 @@
     <script type="text/javascript" src='@routes.Assets.at("javascripts/main.js")'></script>
     <script>
         $(document).foundation();
+        $("dl.resource-list dt").on("click", function(){
+            $(this).toggleClass('on');
+        });
+        $(document).on("click", ".expand", function(){
+            $(this).next('dl').find('dt').addClass('on');
+            $(this).removeClass('expand').addClass('collapse');
+        })
+        $(document).on("click", ".collapse", function(){
+            $(this).next('dl').find('dt').removeClass('on');
+            $(this).removeClass('collapse').addClass('expand');
+        })
     </script>
 </body>
 </html>
