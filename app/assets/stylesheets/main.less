@@ -89,6 +89,7 @@ h1,h2,h3,h4,h5,h6 {
 p {
   line-height: 1.4em;
   margin-bottom: 1em;
+  font-size: 1em;
 }
 .anchor-jump {
   margin: 0 0 60px 0;
@@ -311,7 +312,7 @@ ul.off-canvas-list {
       width: 200px;
       left: 50%;
       margin-left: -100px;
-      margin-top: -90px;
+      margin-top: -75px;
     }
     p {
       color: @white;
@@ -475,14 +476,33 @@ dl.resource-list {
     margin: 0 0 5px 0;
     cursor: pointer;
     border-radius: @br;
-    line-height: 1.3em;
     padding: 10px;
+    height: 40px;
     display: inline-block;
     width: 100%;
-    color: @blue-text;
-    font-weight: 400;
-    font-size: 1em;
     transition: @anime;
+    color: @blue-text;
+    position: relative;
+    h2 {
+      color: @blue-text;
+      font-weight: 400;
+      font-size: 1em;
+      line-height: 1.3em;
+      height: 1.3em;
+      display: inline-block;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 50%;
+      @media only screen and (min-width: 40.063em) {
+        max-width: 65%;
+      }
+      @media only screen and (min-width: 64.063em) { 
+        max-width: 75%;
+      }
+    }
+    
     &:hover {
       background-color: @white-dkr;
       transition: @anime;
@@ -496,9 +516,14 @@ dl.resource-list {
     &:before {
       content: "\25BA";
       margin-right: 5px;
+      vertical-align: top;
+      width: 16px;
+      display: inline-block;
+
     }
     &.on:before {
       content: "\25BC";
+
     }
   }
   dd {
@@ -510,6 +535,7 @@ dl.resource-list {
   }
   dt.on {
     border-radius: @br @br 0 0;
+    background-color: @white-dkr;
   }
   dt.on + dd {
     display: block;
@@ -549,7 +575,21 @@ span.expand, span.collapse {
     }
   }
 }
-/*----------Home Page Boxes----------*/
+/*----------Home Page----------*/
+
+.home h1 {
+  
+  width: 100%;
+  @media only screen and (min-width: 40.063em) {
+    width: 100%;
+    font-size: 2.3em;
+  }
+  @media only screen and (min-width: 64.063em) { 
+    width: 90%;
+
+  }
+
+}
 
 .track-grid {
   text-align: center;
@@ -566,6 +606,8 @@ span.expand, span.collapse {
     overflow: hidden;
     transition: @anime;
     border: 1px solid @white-ltr;
+    height: 170px;
+    overflow: hidden;
     &.scalability {
       background: @blue;
       border-radius: @tgbr 0 0 0;
@@ -575,7 +617,7 @@ span.expand, span.collapse {
       }
       & a:before {
         content: "Build a Typesafe Reactive Platform App that scales!";
-        padding: 55px 30px;
+        padding: 50px 30px;
       }
     }
     &.productivity {
@@ -587,7 +629,7 @@ span.expand, span.collapse {
       }
       & a:before {
         content: "Increase your productivity with features like auto-recompile, type inference, and case classes";
-        padding: 45px 30px;
+        padding: 30px 30px;
       }
     }
     &.modernize {
@@ -599,7 +641,7 @@ span.expand, span.collapse {
       }
       & a:before {
         content: "Build HTML5, mobile, and big data apps using frameworks designed for it";
-        padding: 45px 30px;
+        padding: 40px 30px;
       }
     }
     &.quality {
@@ -611,7 +653,7 @@ span.expand, span.collapse {
       }
       & a:before {
         content: "Deliver higher quality releases more frequently";
-        padding: 55px 30px;
+        padding: 50px 30px;
       }
     }
     a {
@@ -619,7 +661,7 @@ span.expand, span.collapse {
       display: inline-block;
       width: 100%;
       padding: 30px 30px;
-      font-size: 18px;
+      font-size: 15px;
       text-shadow: 1px 1px 0px rgba(0, 0, 0, .5);
       overflow: hidden;
       -webkit-transition: @anime;
@@ -642,7 +684,7 @@ span.expand, span.collapse {
         display: inline-block;
         width: 100%;
         padding: 30px 30px;
-        font-size: 18px;
+        font-size: 15px;
         -webkit-transition: @anime;
         -moz-transition: @anime;
         transition: @anime;
@@ -682,6 +724,34 @@ span.expand, span.collapse {
         margin: -30px 0 0 -30px;
         border-radius: 200px;
         line-height: 56px;
+    }
+
+    @media only screen and (min-width: 40.063em) {
+      a {
+        font-size: 18px;
+        &:before {
+          font-size: 18px;
+        }
+      }
+      &.scalability a:before {
+        padding: 55px 30px;
+      }
+      &.productivity a:before {
+        padding: 45px 30px;
+      }
+      &.modernize a:before {
+        padding: 45px 30px;
+      }
+      &.quality a:before {
+        padding: 55px 30px;
+      }
+
+
+
+    }
+    @media only screen and (min-width: 64.063em) { 
+
+
     }
   }
 }

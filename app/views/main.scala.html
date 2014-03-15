@@ -1,15 +1,14 @@
 @(title: String, context: String = "", customMetas: Html = Html.empty)(content: Html)
 
 <!DOCTYPE html>
-<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" >
+<html lang="en">
 <head>
-    <title>@title | Go Typesafe</title>
+    <title>@title - Go Typesafe</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @if(customMetas.body.length == 0) {
-        <meta name="description" content="Default">
-        <meta name="keywords" content="Fallback">
+        <meta name="description" content="Go Typesafe is a set of resources that will help you convince others to adopt the Typesafe Reactive Platform: Play Framework, Akka and Scala">
+        <meta name="keywords" content="Go Typesafe, Typesafe, Typesafe Reactive Platform, Play Framework, Akka, Scala">
     } else {
         @customMetas
     }
@@ -23,51 +22,38 @@
 </head>
 <body class="@context">
     <div class="off-canvas-wrap">
-        
         <div class="inner-wrap">
-
             <nav class="tab-bar">
               <section class="left-small">
                 <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
               </section>
-
               <section class="middle tab-bar-section">
                 <h1 class="title"><a href="@routes.Application.index()">Go Typesafe</a></h1>
               </section>
-
               <section class="support">
                 <span id="trigger-overlay">@components.support()</span>
               </section>
             </nav>
-
             <aside class="left-off-canvas-menu">
               <ul class="off-canvas-list">
-                <!--<li class="scalability"><strong><a href="@routes.Application.scalabilityShowOff()">I need Scalability</a></strong></li>-->
                 <li class="scalability"><a href="@routes.Application.scalabilityShowOff()">Scalability / Show Off @components.scalability()</a></li>
                 <li class="scalability"><a href="@routes.Application.scalabilityGetProof()">Scalability / Get Proof @components.scalability()</a></li>
-                <!--<li class="productivity"><strong><a href="@routes.Application.productivityShowOff()">I need Productivity</a></strong></li>-->
                 <li class="productivity"><a href="@routes.Application.productivityShowOff()">Productivity / Show Off @components.productivity()</a></li>
                 <li class="productivity"><a href="@routes.Application.productivityGetProof()">Productivity / Get Proof @components.productivity()</a></li>
-                <!--<li class="modernize"><strong><a href="@routes.Application.modernizeShowOff()">I need to Modernize</a></strong></li>-->
                 <li class="modernize"><a href="@routes.Application.modernizeShowOff()">Modernize / Show Off @components.modernize()</a></li>
                 <li class="modernize"><a href="@routes.Application.modernizeGetProof()">Modernize / Get Proof @components.modernize()</a></li>
-                <!--<li class="agility"><strong><a href="@routes.Application.agilityQualityShowOff()">I need Agility & Quality</a></strong></li>-->
                 <li class="agility"><a href="@routes.Application.agilityQualityShowOff()">Agility & Quality / Show Off @components.agile()</a></li>
                 <li class="agility"><a href="@routes.Application.agilityQualityGetProof()">Agility & Quality / Get Proof @components.agile()</a></li>
                 <li class="secondary"><a href="@routes.Application.convince()">Convince Your Boss</a></li>
                 <li class="secondary"><a href="@routes.Application.resources()">All Resources</a></li>
                 <li class="secondary"><a class="trigger-overlay" href="#">Help / Contact Typesafe</a></li>
-                
               </ul>
-
             </aside>
-            
             <div class="row">
                 <div class="small-12 large-12 columns">
                     @content
                 </div>
             </div>
-            
             <footer class="site-footer">
                 <div class="row">
                     <div class="small-12 medium-12 large-12 small-centered columns">
@@ -85,16 +71,11 @@
                         <p>©2014</p>
                     </div>
                 </div>
-                
                 <span class="reactive-graphic">@components.platform()</span>
-                <!--<img class="reactive-graphic" src="@routes.Assets.at("images/reactive-platform.svg")">-->
             </footer>
-            
             <!-- close the off-canvas menu -->
             <a class="exit-off-canvas"></a>
-
         </div><!--inner wrap-->
-        
         <!-- open/close -->
         <div class="overlay overlay-hugeinc">
             <button type="button" class="overlay-close">Close</button>
@@ -124,7 +105,6 @@
                 </div>
             </section>
         </div><!--form overlay-->
-    
     </div><!--off canvas wrap-->
     
     <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
