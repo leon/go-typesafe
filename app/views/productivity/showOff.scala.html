@@ -1,8 +1,13 @@
 @(message: String)
 
-@main("Scalalbity Show Off") {
+@customMetas = {
+    <meta name="description" content="Go Typesafe is a set of resources that will help you convince others to adopt the Typesafe Reactive Platform: Play Framework, Akka and Scala">
+    <meta name="keywords" content="Go Typesafe, Typesafe, Typesafe Reactive Platform, Play Framework, Akka, Scala">
+}
 
-    <article id="page-content" class="row productivity show">
+@main("Productivity / Show Off", "show-off", customMetas) {
+
+    <article id="page-content" class="row">
         <div class="small-11 medium-9 large-8 small-centered columns">
             <nav>
                 @components.productivity()
@@ -17,7 +22,7 @@
             </ol>
             <img src="@routes.Assets.at("images/chrome-activator.png")">
             <footer>
-                <a href="@routes.Application.scalabilityGetProof()" class="btn arrow-right">Now lets get ready to show off</a>
+                <a href="@routes.Application.productivityGetProof()" class="btn arrow-right">Next: Productivity / Get Proof</a>
             </footer>
         </div>
     </article>
