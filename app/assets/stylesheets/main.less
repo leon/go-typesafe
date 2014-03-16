@@ -359,6 +359,49 @@ ul.off-canvas-list {
   }
 }
 
+/*----------Resources Key----------*/
+#key {
+  position: fixed;
+  top: 120px;
+  right: -200px;
+  list-style-type: none;
+  text-align: right;
+  line-height: 20px;
+  display: none;
+  li {
+    vertical-align: top;
+    margin-bottom: 10px;
+    height: 1.3em;
+    &:first-child {
+      color: @white-dkr;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: .8em;
+      margin-right: 0px;
+      margin-bottom: 5px;
+    }
+  }
+  span .svg-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+
+  }
+  @media only screen and (min-width: 64.063em) { 
+    display: block;
+  }
+}
+
+.resources #key {
+  transition: @anime;
+  right: 30px;
+  &.hidden {
+    transition: @anime;
+    right: -200px;
+  }
+}
+
+
 /*----------Main Content Area----------*/
 
 #page-content {

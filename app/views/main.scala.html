@@ -12,11 +12,10 @@
     } else {
         @customMetas
     }
-    <link rel='shortcut icon' type='image/png' href='@routes.Assets.at("images/favicon.png")'>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href='@routes.Assets.at("stylesheets/normalize.css")'>
     <link rel="stylesheet" href='@routes.Assets.at("stylesheets/foundation.min.css")'>
-    <link rel="stylesheet" href='@routes.Assets.at("stylesheets/main.css")'>
+    <link rel="stylesheet" href='@routes.Assets.at("stylesheets/main.min.css")'>
     <script type="text/javascript" src='@routes.Assets.at("javascripts/vendor/modernizr.js")'></script>
     <link rel='shortcut icon' href='@routes.Assets.at("favicon.ico")' />
 </head>
@@ -49,6 +48,13 @@
                 <li class="secondary"><a class="trigger-overlay" href="#">Help / Contact Typesafe</a></li>
               </ul>
             </aside>
+            <ul id="key" class="hidden">
+                <li>Key</li>
+                <li>Scalability<span>@components.scalability()</span></li>
+                <li>Productivity<span>@components.productivity()</span></li>
+                <li>Modernize<span>@components.modernize()</span></li>
+                <li>Agility & Quality<span>@components.agile()</span></li>
+            </ul>
             <div class="row">
                 <div class="small-12 large-12 columns">
                     @content
@@ -110,20 +116,19 @@
     <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
     <script type="text/javascript" src='@routes.Assets.at("javascripts/vendor/fastclick.js")'></script>
     <script type="text/javascript" src='@routes.Assets.at("javascripts/foundation.min.js")'></script>
-    <script type="text/javascript" src='@routes.Assets.at("javascripts/main.js")'></script>
-    <script>
-        $(document).foundation();
-        $("dl.resource-list dt").on("click", function(){
-            $(this).toggleClass('on');
-        });
-        $(document).on("click", ".expand", function(){
-            $(this).next('dl').find('dt').addClass('on');
-            $(this).removeClass('expand').addClass('collapse');
-        })
-        $(document).on("click", ".collapse", function(){
-            $(this).next('dl').find('dt').removeClass('on');
-            $(this).removeClass('collapse').addClass('expand');
-        })
+    <script type="text/javascript" src='@routes.Assets.at("javascripts/main.min.js")'></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23127719-1']);
+      _gaq.push(['_setDomainName', 'typesafe.com']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
     </script>
 </body>
 </html>

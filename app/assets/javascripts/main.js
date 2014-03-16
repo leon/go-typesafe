@@ -124,5 +124,31 @@ if ( typeof define === 'function' && define.amd ) {
   $('.trigger-overlay').on('click', function(){
     $('#trigger-overlay').click();
   })
+  //init foundation
+  $(document).foundation();
+  
+  //resource lists
+  $("dl.resource-list dt").on("click", function(){
+      $(this).toggleClass('on');
+  });
+  $(document).on("click", ".expand", function(){
+      $(this).next('dl').find('dt').addClass('on');
+      $(this).removeClass('expand').addClass('collapse');
+  })
+  $(document).on("click", ".collapse", function(){
+      $(this).next('dl').find('dt').removeClass('on');
+      $(this).removeClass('collapse').addClass('expand');
+  })
+
+  $('.off-canvas-wrap').scroll( function(){
+        console.log($(this).scrollTop());
+        if ($(this).scrollTop() <= 60) {
+            $("#key").addClass("hidden");
+        } 
+        else {
+            $("#key").removeClass("hidden");
+        }
+    }); 
+
 
 })();
