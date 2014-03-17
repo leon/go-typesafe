@@ -5,7 +5,7 @@
     <meta name="keywords" content="Go Typesafe, Typesafe, Typesafe Reactive Platform, Play Framework, Akka, Scala">
 }
 
-@main("Scalalbity / Show Off", "show-off", customMetas) {
+@main("Scalability / Show Off", "show-off", customMetas) {
 
     <article id="page-content" class="row">
         <div class="small-11 medium-9 large-8 small-centered columns">
@@ -13,16 +13,39 @@
                 @components.scalability()
                 <h2>Scalability / Show Off</h2>
             </nav>
-            <h1>Build a Typesafe Reactive Platform App that scales!</h1>
-            <p class="bullet-setup">Here is how to get set up:</p>
+            <h1>Want to show off the Scalability of the Typesafe Reactive Platform?  Here are two great demos.</h1>
+            <p class="bullet-setup">Show off 40k Requests per Second with Play Framework</p>
+            <p>
+                This demo shows how Play can handle tens of thousands of requests per second while remaining Responsive. Learn more about the Responsive trait of Reactive applications in the <a href="http://reactivemanifesto.org" target="_blank">Reactive Manifesto</a>.
+            </p>
             <ol>
-                <li>Download the <a href="#">Reactive Scales Activator template</a></li>
-                <li>Launch Activator</li>
+                <li>Download the <a href="http://typesafe.com/activator/template/bundle/reactive-scales">Reactive Scales Activator template</a></li>
+                <li>Extract the zip and launch the Activator UI either by running the <code>activator</code> (Mac & Linux) or <code>activator.bat</code> (Windows) from your file browser or from the command line with <code>activator ui</code></li>
                 <li>Follow the instruction in the tutorial</li>
             </ol>
-            <img src="@routes.Assets.at("images/chrome-activator.png")">
+            <p>
+                To see this demo in action check out this short screencast:
+                <iframe width="640" height="360" src="//www.youtube.com/embed/cnPPLpIk9mo?rel=0" frameborder="0" allowfullscreen></iframe>
+            </p>
+            <p class="bullet-setup">Show off ??? Messages Per Second with Akka</p>
+            <p>
+                This demo shows how Akka can send zillion's of messages 
+            </p>
+            <ol>
+                <li>Download the <a href="#">??? Activator template</a></li>
+                <li>Extract the zip and launch the Activator UI either by running the <code>activator</code> (Mac & Linux) or <code>activator.bat</code> (Windows) from your file browser or from the command line with <code>activator ui</code></li>
+                <li>Follow the instruction in the tutorial</li>
+            </ol>
+            <p>
+                To see this demo in action check out this short screencast:
+                <iframe width="640" height="360" src="//www.youtube.com/embed/cnPPLpIk9mo?rel=0" frameborder="0" allowfullscreen></iframe>
+            </p>
+
             <footer>
-                <a href="@routes.Application.scalabilityGetProof()" class="btn arrow-right">Next: Scalability / Get Proof</a>
+                <p class="bullet-setup">
+                    Both of these demos are single server micro-benchmarks but of-course you can also scale horizontally with many Play nodes behind a load balancer and using Akka clustering.
+                </p>
+                <a href="@routes.Application.scalabilityGetProof()" class="btn arrow-right">Need proof?  Continue reading to learn about how Klout handles 1 billion transactions a day through Play.  Or how we ran a 2400 node Akka cluster in the cloud.</a>
             </footer>
         </div>
     </article>
