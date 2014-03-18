@@ -116,6 +116,21 @@ ul.no-bullets {
   text-align: center;
   transition: @anime;
   text-transform: uppercase;
+  &.small {
+    padding: 0.4em 0.8em;
+    width: auto;
+    font-size: .8em;
+    text-transform: capitalize;
+    background-color: @blue;
+    border-bottom: 2px solid @blue-text;
+    &:after {
+      content: "";
+    }
+    &:hover {
+      background-color: @blue-dkr;
+      color: @white;
+    }
+  }
   &:hover {
     background-color: @blue-dkr;
     color: @white;
@@ -422,6 +437,7 @@ article h1 {
 
 }
 
+
 article {
   h1,h2,h3 {
     color: @navy;
@@ -477,11 +493,35 @@ article {
     margin-top: 1em;
     color: @slate-ltr;
   }
-  h2 {
-    margin-bottom: .3em;
-    font-weight: 700;
-    margin-top: 1em;
-    font-size: 1em;
+  
+}
+.show-off article h2 {
+  margin-bottom: .3em;
+  font-weight: 700;
+  margin-top: 1em;
+  font-size: 1em;
+}
+.get-proof article
+  section {
+    border-bottom: 1px solid darken(@white-ltr, 5%);
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    h1 {
+      width: auto;
+      float: left;
+      margin-top: 0;
+      a {
+        color: @navy;
+
+      }
+    }
+    p {
+      clear: both;
+    }
+    .btn.small {
+      float: right;
+      top: 5px;
   }
 }
 
@@ -947,3 +987,107 @@ form {
 
 }
 
+
+blockquote {
+  text-align: center;
+  background: transparent;
+  margin: 40px 0;
+  padding: 0;
+  border: none;
+
+  p {
+    background-color: @white;
+    padding: 1.875em;
+    border-radius: 2px;
+    border-bottom: 2px solid @white-dkr;
+    color: red-text;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    margin-bottom: 0;
+    margin-top: 0;
+    &:before {
+      content: "\201C";
+    }
+      
+    &:after {
+      content: "\201D";
+    }
+  }
+
+  footer {
+    color: @navy;
+    font-size: 0.8em;
+    font-style: normal;
+    margin-bottom: 40px;
+    width: 80%;
+    text-align: right;
+    margin-right: 20%;
+    margin-top: 0;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: transparent url(../images/svg/ui/quote-white-right.svg) no-repeat center right;
+    &.alt {
+      background: transparent url(../images/svg/ui/quote-white-left.svg) no-repeat center left;
+      text-align: left;
+      margin-right: 0;
+      margin-left: 20%;
+      padding-right: 0;
+      padding-left: 100px;
+    }
+      
+    strong {
+      display: block;
+    }
+  }
+}
+
+blockquote.darker {
+  p {
+    background-color: @white-dkr;
+  }
+}
+    
+  
+
+blockquote.blue {
+  p {
+    background-color: @blue;
+    color: white;
+    border-bottom: 2px solid @blue-dkr;
+  }
+  footer {
+    background: transparent url(../images/svg/ui/quote-blue-right.svg) no-repeat center right;
+    &.alt {
+      background: transparent url(../images/svg/ui/quote-blue-left.svg) no-repeat center left;
+    } 
+  }
+}
+
+blockquote.red {
+  p {
+    background-color: @red;
+    color: white;
+    border-bottom: 2px solid @red-dkr;
+    a {
+      color: @white;
+      text-decoration: underline;
+    }
+  }
+  footer {
+    background: transparent url(../images/svg/ui/quote-red-right.svg) no-repeat center right;
+    &.alt {
+      background: transparent url(../images/svg/ui/quote-red-left.svg) no-repeat center left;
+
+    }
+  }
+}
+  
+blockquote.thin footer {
+  margin-right: 5%;
+  background-size: 15%;
+  padding-right: 50px;
+  background-position: top right;
+}
