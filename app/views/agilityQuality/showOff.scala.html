@@ -14,13 +14,41 @@
                 <h2>Agility & Quality / Show Off</h2>
             </nav>
             <h1>Deliver higher quality releases more frequently.</h1>
-            <p>Here is how to get set up:</p>
+            <p class="bullet-setup">The Typesafe Reactive Platform enables continuous delivery while also reducing risk.  Here's how:</p>
+            <ul>
+                <li>Type-safety minimizes the chances of something going wrong in production.</li>
+                <li>Through a containerless deployment model, redeployments are quick and easy.</li>
+                <li>Play Framework is RESTful by default and has built-in JSON making it a great choice for micro-services which help teams delivery faster.</li>
+            </ul>
+
+            <p class="bullet-setup">Want to show off the benefits of type-safety?</p>
             <ol>
-                <li>Download the <a href="#">COntinuous Quality Activator template</a></li>
-                <li>Launch Activator</li>
-                <li>Follow the instruction in the tutorial</li>
+                <li><a href="http://typesafe.com/platform/getstarted" target="_blank">Download Typesafe Activator</a></li>
+                <li>Create a new app using the Reactive Stocks template</li>
+                <li>Open Reactive Stocks in your browser: <a href="http://localhost:9000" target="_blank">localhost:9000</a></li>
+                <li>
+                    See what happens when you make a typo in one of the following files:<br/>
+                    <code>conf/routes</code><br/>
+                    <code>app/controllers/Application.java</code><br/>
+                    <code>app/controllers/StockSentiment.scala</code><br/>
+                    <code>app/views/index.scala.html</code><br/>
+                    (Hint: Reload your browser to see a pretty compile error)
+                </li>
             </ol>
-            <img src="@routes.Assets.at("images/chrome-activator.png")">
+            
+            <p class="bullet-setup">What to show off how easy it is to deploy containerless Play applications?</p>
+            <ol>
+                <li>From a command line in the root of the Reactive Stocks app you just created, run: <code>activator dist</code></li>
+                <li>Copy the generated zip file to a different machine / server, extract the zip, and run the start script in the <code>bin</code> directory</li>
+            </ol>
+            
+            <p class="bullet-setup">Of-course deployment can be even more agile when you combine the Typesafe Reactive Platform with tools and services like Heroku, Docker, Mesos, etc</p>
+            
+            <p>
+                Here is a short video that will show off how you can do continuous delivery with Play and Heroku:
+                <iframe width="480" height="360" src="//www.youtube.com/embed/grIfxEYOW5I?rel=0" frameborder="0" allowfullscreen></iframe>
+            </p>
+            
             <footer>
                 <a href="@routes.Application.agilityQualityGetProof()" class="btn arrow-right">Next: Agility & Quality / Get Proof</a>
             </footer>
