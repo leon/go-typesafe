@@ -105,8 +105,8 @@ ul.no-bullets {
   display: inline-block;
   border-radius: @br;
   background-color: @blue;
-  line-height: 40px;
-  padding: 0 30px;
+  line-height: 1.3em;
+  padding: 1em 10%;
   color: @white;
   border-bottom: 2px solid @blue-text;
   position: relative;
@@ -124,6 +124,10 @@ ul.no-bullets {
   &:after {
     content: "\232A";
     right: -30px;
+    top: 50%;
+    margin-top: -8px;
+    height: 20px;
+    line-height: 20px;
     opacity: 0;
     position: absolute;
     -webkit-transition: all 0.3s;
@@ -472,6 +476,12 @@ article {
     font-weight: 700;
     margin-top: 1em;
     color: @slate-ltr;
+  }
+  h2 {
+    margin-bottom: .3em;
+    font-weight: 700;
+    margin-top: 1em;
+    font-size: 1em;
   }
 }
 
