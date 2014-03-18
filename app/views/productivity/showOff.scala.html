@@ -21,17 +21,15 @@
                 <li>Start coding!</li>
             </ol>
             <p class="bullet-setup">Need some inspiration?  Check out these videos:</p>
-            <ul>
-                <li>
-                    <p>Building a Reactive application with Play Framework and Scala</p>
-                    <iframe width="640" height="360" src="//www.youtube.com/embed/9481uO3kmZU" frameborder="0" allowfullscreen></iframe>
-                </li>
-                <li>
-                    <p>Building a database-driven application with Play Framework and Java</p>
-                    <!-- TODO: New video -->
-                    <iframe src="//player.vimeo.com/video/58969923?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                </li>
-            </ul>
+            
+            <p>Building a Reactive application with Play Framework and Scala</p>
+            <div class="flex-video widescreen youtube">
+                <iframe width="640" height="360" src="//www.youtube.com/embed/9481uO3kmZU" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            </div>
+            <p>Building a database-driven application with Play Framework and Java</p>
+            <div class="flex-video widescreen vimeo">
+                <iframe src="//player.vimeo.com/video/58969923?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            </div>
             
             <footer>
                 <a href="@routes.Application.productivityGetProof()" class="btn arrow-right">Next: Productivity / Get Proof</a>

@@ -164,6 +164,31 @@ ul.no-bullets {
 }
 
 
+.flex-video {
+  position: relative;
+  padding-top: 1.5625rem;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 1rem;
+  overflow: hidden; 
+}
+.flex-video.widescreen {
+  padding-bottom: 56.34%; 
+}
+.flex-video.vimeo {
+  padding-top: 0; 
+}
+
+.flex-video iframe,
+.flex-video object,
+.flex-video embed,
+.flex-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+}
 
 
 
@@ -461,8 +486,9 @@ article {
     }
     h2 {
       line-height: 40px;
-      font-size: 1em;
-      margin: 0;
+      font-size: 1em !important;
+      margin: 0 !important;
+      font-weight: 400 !important;
       span {
         margin-left: 10px;
       }
@@ -520,8 +546,7 @@ article {
       clear: both;
     }
     .btn.small {
-      float: right;
-      top: 5px;
+
   }
 }
 
@@ -534,6 +559,14 @@ article {
     position: absolute;
     left: -130px;
     top: 0px;
+  }
+  section.asset {
+    h4 {
+      margin-top: 0;
+    }
+    padding: 20px;
+    background-color: darken(@white-ltr, 5%);
+    margin: 20px 0;
   }
 }
 
@@ -594,6 +627,10 @@ dl.resource-list {
       @media only screen and (min-width: 64.063em) { 
         max-width: 75%;
       }
+    }
+    .btn.small {
+      display: inline-block;
+      float: none;
     }
     
     &:hover {
@@ -999,8 +1036,8 @@ blockquote {
     background-color: @white;
     padding: 1.875em;
     border-radius: 2px;
-    border-bottom: 2px solid @white-dkr;
-    color: red-text;
+    border-bottom: 2px solid @grey-ltr;
+    color: @red-text;
     font-weight: 400;
     font-style: normal;
     font-size: 1.1em;
@@ -1028,9 +1065,9 @@ blockquote {
     padding-right: 100px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: transparent url(../images/svg/ui/quote-white-right.svg) no-repeat center right;
+    background: transparent url(../images/svg/ui/quote-white-right-alt.svg) no-repeat center right;
     &.alt {
-      background: transparent url(../images/svg/ui/quote-white-left.svg) no-repeat center left;
+      background: transparent url(../images/svg/ui/quote-white-left-alt.svg) no-repeat center left;
       text-align: left;
       margin-right: 0;
       margin-left: 20%;
