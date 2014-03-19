@@ -14,10 +14,10 @@
                 <h2>Productivity / Get Proof</h2>
             </nav>
             @intro()
-            <section>
-                <h1>Productivity Of Developers And Teams</h1>
+            <section class="resource-section">
+                <h1>Framing Developer Productivity</h1><span class="expand"></span>
                 <dl class="resource-list no-bullets">
-                    <dt><h2>Explaining Developer Productivity - LinkedIn</h2>@components.productivity()</dt>
+                    <dt><h2>Understanding Individual And Team Productivity - LinkedIn</h2>@components.productivity()</dt>
                     <dd>
                         <p>One of the strongest evangelists at discussing developer productivity is Yevgeniy (Jim) Brikman, the lead developer bringing the Play Framework and Scala to LinkedIn.</p> 
                         <p>The first part of the video discusses how LinkedIn is using our technologies build front-end and back-end services at massive scale. Forward the video to 43:34 to hear his interesting take on developer productivity. </p>
@@ -25,13 +25,19 @@
                     </dd>
                 </dl>
             </section>
-            <section>
-                <h1>Productivity Through Smaller Codebase</h1>
+            <section class="resource-section">
+                <h1>Developer Productivity In Action</h1><span class="expand"></span>
                 <dl class="resource-list no-bullets">
+                    <dt><h2>Speeding Mobile Development By 4x - 47 Degrees</h2>@components.productivity()</dt>
+                    <dd>
+                        <p>After one month, 47 Degrees, a software development agency focused native mobile apps, realized that developing web applications and REST API’s with Play and Scala made their team at least four times more productive.</p> 
+                        <p>Play’s built-in support for JSON serialization, reusable templates and Scala features such as traits, higher order functions and Singleton style companion objects sped development and reduced the codebase considerably (since many of the patterns and technique they had to worry about in Java are built into Play, Akka and Scala).</p>
+                        <a target="_blank" href="http://downloads.typesafe.com/website/casestudies/47-Degrees-Case-Study-v1.0.pdf" class="btn small">Watch The Video</a>
+                    </dd>
                     <dt><h2>Decreasing Codebase by 78% - Gawker</h2>@components.productivity()</dt>
                     <dd>
-                        <p>After seven years of PHP development, the team at Gawker Media started to bump into issues maintaining an unruly 300,000-line codebase that served content across eight original brands with a collective audience of tens of millions of US readers. </p>
-                        <p>Gawker Media made the move to consolidate their fragmented infrastructure under a JVM-based umbrella, and, in turn, consolidated their codebase to approximately 65,000 lines of Scala.</p>
+                        <p>It stands to reason that reducing your codebase can have a tremendous impact on developer productivity.  That was certainly the case at Gawker. </p>
+                        <p>After seven years of PHP development, the team at Gawker Media started to bump into issues maintaining an unruly 300,000-line codebase. They made the move to consolidate their fragmented infrastructure under a JVM-based umbrella, and, in turn, consolidated their codebase to approximately 65,000 lines of Scala.</p>
                         <a target="_blank" href="http://downloads.typesafe.com/website/casestudies/Gawker-Media-Case-Study.pdf" class="btn small">Read the Case Study</a>
                     </dd>
                 </dl>
