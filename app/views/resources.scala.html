@@ -19,118 +19,261 @@
                 </nav>
                 <ul class="no-bullets jump-links">
                     <li><a href="#case-studies">Case Studies</a></li>
-                    <li><a href="#webinars">Webinars</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#reports">Reports</a></li>
+                    <li><a href="#articles">Articles</a></li>
+                    <li><a href="#best-practice">Developer Best Practices</a></li>
+                    <li><a href="#community-stories">Community Stories</a></li>
                     <li><a href="#presentations">Presentations</a></li>
-                    <li><a href="#templates">Templates</a></li>
+
+                    
                 </ul>
             </article>
             <span id="case-studies" class="anchor-jump"></span>
             <article class="resource-section">
                     <h2>Case Studies</h2><span class="expand"></span>
                     <dl class="resource-list no-bullets">
-                        <dt><h2>This is a resource title thats long this is really long isn't it hello I'm still going and should be wrapping</h2>@components.productivity()@components.agile()@components.productivity()@components.agile()</dt>
+                        
+                        <dt><h2>Sub 20ms Response - Ticketfly</h2>@components.scalability()</dt>
                         <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
+                            <p>Ticketfly crafted a powerful reserved seating engine (something that is notoriously complicated to build because of its rapidly changing state), that could scale easily, handle bursty and unpredictable traffic patterns and compete with online ticket scalpers.</p>
+                            <p>The concurrent and non-blocking system allows visitors to find and allocate seats, under load, in less than 20ms. The system has very good performance without having to try very hard to achieve it.</p>
+                            <a target="_blank" href="http://downloads.typesafe.com/website/casestudies/Ticketfly-Case-Study-v1.4.pdf">Read the Case Study</a>
                         </dd>
-                        <dt><h2>This is a resource title thats long</h2>@components.productivity()@components.agile()</dt>
+
+                        <dt><h2>Sub 12ms Response - Sharthrough</h2>@components.scalability()</dt>
                         <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
+                            <p>Sharethrough chose Scala to build industry's first native ad management system. It runs thousands of auctions respecting a myriad of variables to match quality content to the right viewer at the right time in the right place. The system’s 99.99% latency is 12ms. </p>
+                            <a target="_blank" href="http://downloads.typesafe.com/website/casestudies/Sharethrough-Case-Study-v1.0.pdf">Read the Case Study</a>
                         </dd>
-                        <dt><h2>This is a resource title thats long</h2>@components.productivity()@components.agile()</dt>
+
+                        <dt><h2>1 Billion API Requests/Day - Klout</h2>@components.scalability()</dt>
                         <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
+                            <p>Klout is the leader in measuring online influence by calculating a user's social impact through extensive data mining. Their system performs data aggregation across several social networks and data stores in real time, with results instantaneously presented to end users and scales to handle one billion API request per day.</p>
+                            <a target="_blank" href="http://downloads.typesafe.com/website/casestudies/Klout-Case-Study-v1.0.pdf">Read the Case Study</a>
                         </dd>
-                        <dt><h2>This is a resource title thats long</h2>@components.productivity()@components.agile()</dt>
+
+                        <dt><h2>Speeding Mobile Development By 4x - 47 Degrees</h2>@components.productivity()</dt>
                         <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
+                            <p>After one month, 47 Degrees, a software development agency focused native mobile apps, realized that developing web applications and REST API’s with Play and Scala made their team at least four times more productive.</p>
+                            <p>Play’s built-in support for JSON serialization, reusable templates and Scala features such as traits, higher order functions and Singleton style companion objects sped development and reduced the codebase considerably (since many of the patterns and technique they had to worry about in Java are built into Play, Akka and Scala).</p>
+                            <a target="_blank" href="http://downloads.typesafe.com/website/casestudies/47-Degrees-Case-Study-v1.0.pdf">Read the Case Study</a>
                         </dd>
+
+                        <dt><h2>Decreasing Codebase by 78% - Gawker </h2>@components.modernize()@components.productivity()@components.scalability()</dt>
+                        <dd>
+                            <p>It stands to reason that reducing your codebase can have a tremendous impact on developer productivity. That was certainly the case at Gawker.</p>
+                            <p>After seven years of PHP development, the team at Gawker Media started to bump into issues maintaining an unruly 300,000-line codebase. They made the move to consolidate their fragmented infrastructure under a JVM-based umbrella, and, in turn, consolidated their codebase to approximately 65,000 lines of Scala.</p>
+                            <a target="_blank" href="http://downloads.typesafe.com/website/casestudies/Gawker-Media-Case-Study.pdf">Read the Case Study</a>
+                        </dd>
+
+                        <dt><h2>From Monolith To Micro-Services - The Guardian</h2>@components.agile()@components.modernize()@components.scalability()</dt>
+                        <dd>
+                            <p>There are a ton of example case studies on our website that  discuss the benefits of moving from a monolithic code base to micro-services. The Guardian case study is a good fit if your company has a fairly conser if your enterprise company is currently using Java. Plus, it nicely weaves in the Java-to-Scala story. </p>
+                            <a target="_blank" href="http://downloads.typesafe.com/website/casestudies/The-Guardian-Case-Study-v1.1.pdf">Read the Case Study</a>
+                        </dd>
+
+                        <dt><h2>Writing Startlingly Simple Code - Tapad</h2>@components.agile()@components.modernize()</dt>
+                        <dd>
+                            <p>Tadpad processes 150 billion data points from cookies, cellphone IDs, Wi-Fi connections, and other inputs for its highly concurrent advertising system. The Actor implementation from Akka made it startlingly simple to write comprehensible code that leverages all the cores in their production machines for this sophisticated system.</p>
+                            <a target="_blank" href="http://downloads.typesafe.com/website/casestudies/Tapad-Case-Study-v1.0.pdf">Read the Case Study</a>
+                        </dd>
+
+                        <dt><h2>Reducing Costs & Improving Flexibility - Janrain</h2>@components.agile()@components.modernize()</dt>
+                        <dd>
+                            <p>Janrain’s products are primarily deployed on the Amazon Cloud. The value they see in Typesafe is two fold: 1) enabling elastic sizing in the Cloud to reduce costs over JRuby within a Tomcaat container and 2) improving developer flexibility by freeing themselves from the technical debt and of constraints of their previous environment.</p>
+                            <a target="_blank" href="http://downloads.typesafe.com/website/casestudies/Janrain-Case-Study.pdf">Read the Case Study</a>
+                        </dd>
+
+                        <dt><h2>Boosting Quality With Akka/Scala - CCAD (Comcast spinoff)</h2>@components.agile()@components.modernize()</dt>
+                        <dd>
+                            <p>CCAD (Combined Conditional Access Development) is a joint venture between Comcast and Arris Group (which acquired Motorola Home). </p>
+                            <p>The quality level of what the team produces with Scala, Akka, and functional programming techniques is so high that the product marketing team and product owners have made numerous comments about the technology stack’s contribution towards both this quality level and reduced qualification and regression testing.</p>
+                            <a target="_blank" href="http://downloads.typesafe.com/website/casestudies/CCAD-Case-Study.pdf">Read the Case Study</a>
+                        </dd>
+                        
                     </dl>
             </article>
-            <span id="webinars" class="anchor-jump"></span>
+            <span id="videos" class="anchor-jump"></span>
             <article class="resource-section">
-                    <h2>Webinars</h2><span class="expand"></span>
+                    <h2>Videos</h2><span class="expand"></span>
                     <dl class="resource-list no-bullets">
-                        <dt><h2>This is a resource title thats long</h2>@components.productivity()@components.agile()</dt>
+                        
+                        <dt><h2>Understanding Individual And Team Productivity - LinkedIn </h2>@components.productivity()</dt>
                         <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
+                            <p>One of the strongest evangelists at discussing developer productivity is Yevgeniy (Jim) Brikman, the lead developer bringing the Play Framework and Scala to LinkedIn. </p>
+                            <p>The first part of this JaxConf video discusses how LinkedIn is using our technologies build front-end and back-end services at massive scale. Forward the video to 43:34 to hear his interesting take on developer productivity.</p>
+                            <a target="_blank" href="https://thenewcircle.com/s/post/1498/the_play_framework_at_linkedin_productivity_and_performance_at_scale">Watch The Video</a>
                         </dd>
-                        <dt><h2>This is a resource title thats long</h2>@components.productivity()@components.agile()</dt>
+
+                        <dt><h2>Introducing Scala To Your Peers - Mentor Graphics</h2>@components.modernize()</dt>
                         <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
+                            <p>When looking for ways to provide peers with proof, consider creating a casual knowledge sharing environment. That’s what Sr. Architect Joe Barnes did at Mentor Graphics. This video captures his introduction to functional programming in Scala and is filled with inspiring ideas to help jumpstart your presentation.</p>
+                            <a target="_blank" href="https://www.youtube.com/watch?v=2Ji5i0x2gJI">Watch The Video</a>
                         </dd>
-                        <dt><h2>This is a resource title thats long</h2>@components.productivity()@components.agile()</dt>
+
+                        <dt><h2>Making The Case For Play/Scala - BBC</h2>@components.agile()@components.modernize()@components.productivity()</dt>
                         <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
+                            <p>In this video from PingConf, BBC explores how they achieved management buy-in to take their team of PHP developers into a new world of Play Framework and Scala for the rewrite of its popular CBeebies children’s website. It’s not a technical talk. In fact, the title could be, "How to sell change into a big, multi-national organization so it’s not too scary."</p>
+                            <p>The video discusses how the team got management buy-in by demonstrating skills transfer and success within a few weeks. Management and stakeholders never saw anything happen this fast. Plus, Scala’s cool factor made it easy to recruit, giving management comfort that the team made the right choice.</p>
+                            <a target="_blank" href="http://www.ustream.tv/recorded/42803753">Watch The Video</a>
                         </dd>
-                        <dt><h2>This is a resource title thats long</h2>@components.productivity()@components.agile()</dt>
+
+                        <dt><h2>Learning Scala - Netflix</h2>@components.modernize()</dt>
                         <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
+                            <p>Dianne Marsh, Director of Engineering for Cloud Tools at Netflix and co-author of Atomic Scala, explores best practices for learning Scala in this 30-minute introductory video.</p>
+                            <a target="_blank" href="https://www.youtube.com/watch?v=h4oMUyjL3mQ">Watch The Video</a>
                         </dd>
+                        
                     </dl>
             </article>
+
+            <span id="ebooks" class="anchor-jump"></span>
+            <article class="resource-section">
+                    <h2>E-Books</h2><span class="expand"></span>
+                    <dl class="resource-list no-bullets">
+                        <!--
+                        <dt><h2>Atomic Scala, by Bruce Eckel and Dianne Marsh</h2>@components.modernize()</dt>
+                        <dd>
+                            <p>Bruce Eckel and Dianne observed that it would be possible to teach Scala to a beginning programmer and, if they did things right, it would actually be an easier language to learn than Java. The goal of this book is to bridge the gap between the beginner books—either beginning programmer, or just Scala beginner with experience in another language—and the rest of the books out there. If Bruce and Dianne can get you past this first set of hurdles, then you’ll be ready for the next step, probably Cay Horstman's, Scala for the Impatient. </p>
+                            <a target="_blank" href="#">Download the free e-book</a>
+                        </dd>
+                        -->
+                        <dt><h2>Scala for the Impatient, by Cay Hortzman</h2>@components.modernize()</dt>
+                        <dd>
+                            <p>Every concept and technique in Scala for the Impatient is presented in "blog-size" chunks that can be digested quickly and reviewed as needed for specific tasks. Horstmann offers hands-on activities that guide readers through four well-defined stages of competency: basic, intermediate, advanced and expert.</p>
+                            <a target="_blank" href="#">Download the free e-book</a>
+                        </dd>
+
+                        <dt><h2>Scala in Depth, by Typesafe technical staff member Josh Suereth</h2>@components.modernize()</dt>
+                        <dd>
+                            <p>This is a unique book designed to help you integrate Scala effectively into your development process. By presenting the emerging best practices and designs from the Scala community, it guides you through dozens of powerful techniques example by example. There's little heavy-handed theory here—just dozens of crisp, practical techniques for coding in Scala. Written for readers who know Java, Scala, or another OO language.</p>
+                            <a target="_blank" href="#">Download the free e-book</a>
+                        </dd>
+                        
+                    </dl>
+            </article>
+
+
+            <span id="reports" class="anchor-jump"></span>
+            <article class="resource-section">
+                    <h2>Reports</h2><span class="expand"></span>
+                    <dl class="resource-list no-bullets">
+                        
+                        <dt><h2>A Pragmatic Guide To Scala Adoption - Zero Turnaround</h2>@components.modernize()</dt>
+                        <dd>
+                            <p>In the last few years there has been some criticism of Scala; it’s mostly been accused of being too complex. In this report, Zero Turnaround opines that the perceived complexity of Scala actually arises more from the diversity of the ecosystem rather than the language itself. Then they take a look at a simpler subset of Scala that is perhaps a good place to start for Java teams.</p>
+                            <a target="_blank" href="http://pages.zeroturnaround.com/rs/zeroturnaround/images/Scala2013-A-Pragmatic-Guide-To-Adoption.pdf">Read The Report</a>
+                        </dd>
+
+                        <dt><h2>Developer Comprehension 30% Faster - Research</h2>@components.modernize()@components.productivity()</dt>
+                        <dd>
+                            <p>The research paper of Gilles Dubochet at EPFL reports, on average, it is 30% faster to comprehend algorithms that use for-comprehensions and maps, as in Scala, rather than those with the iterative while-loops of Java.</p>
+                            <a target="_blank" href="http://infoscience.epfl.ch/record/138586">Read The Report</a>
+                        </dd>
+
+                        <dt><h2>Java-To-Scala Devs Feel More Productive - Research</h2>@components.modernize()@components.productivity()</dt>
+                        <dd>
+                            <p>The survey created by Graham Lea regarding the perceived productivity gains of Scala developers shows that Java programmers who learn Scala generally feel more productive pretty much straight away. </p>
+                            <a target="_blank" href="http://www.grahamlea.com/2013/02/survey-results-are-developers-more-productive-in-scala/">Read The Report</a>
+                        </dd>
+                        
+                    </dl>
+            </article>
+            <span id="articles" class="anchor-jump"></span>
+            <article class="resource-section">
+                    <h2>Articles</h2><span class="expand"></span>
+                    <dl class="resource-list no-bullets">
+                        
+                        <dt><h2>100x Bursty Traffic Increase - Gilt</h2>@components.modernize()@components.scalability()</dt>
+                        <dd>
+                            <p>Over the course of a few seconds, Gilt’s traffic can increase by as much as 100x. Essentially, they need to have the e-commerce infrastructure almost at Amazon scale for at least 15 minutes every day.</p>
+                            <p>Most days this happens exactly at noon EST, and until a couple of years ago, noon was a stressful time every day. Nowadays it’s usually a non-event—in part because of Typesafe. This Q&A with architect Eric Bowman describes Gilt Groupe's journey from Rails to Reactive.</p>
+                            <a target="_blank" href="http://code.tutsplus.com/articles/interview-with-eric-bowman-of-giltcom--net-35653">Read The Article</a>
+                        </dd>
+
+                        <dt><h2>From Rails To Reactive - Gilt Groupe</h2>@components.modernize()@components.scalability()</dt>
+                        <dd>
+                            <p>Gilt was originally a Ruby on Rails application with a PostgreSQL backend in 2007. Gilt grew faster than anyone could have imagined and everyone was caught off guard by how difficult it was to scale the Rails stack. This article does a great job of describing Gilt’s historical transition from Rails to the Typesafe Reactive Platform. </p>
+                            <a target="_blank" href="http://code.tutsplus.com/articles/interview-with-eric-bowman-of-giltcom--net-35653">Read The Article</a>
+                        </dd>
+
+                        <dt><h2>Martin Odersky Discusses Scala And Java 8 - ReadWrite</h2>@components.modernize()</dt>
+                        <dd>
+                            <p>People often ask me if lambdas coming to Java will slow the adoption of Scala. Quite the opposite! Instead, I feel the acceptance of these features by the Java Community Process validates our innovation in language design on the JVM. As developers come to understand what these features are and how they work, they will also develop a better appreciation of the more extensive support of functional programming that Scala provides.</p>
+                            <a target="_blank" href="http://readwrite.com/2014/02/20/java-8-scala-competitors-bffs-martin-odersky#awesm=~oyZVteRDm3nGgZ">Read The Article</a>
+                        </dd>
+                        
+                    </dl>
+            </article>
+
+            <span id="best-practice" class="anchor-jump"></span>
+            <article class="resource-section">
+                    <h2>Developer Best Practices</h2><span class="expand"></span>
+                    <dl class="resource-list no-bullets">
+
+                        <dt><h2>Scala Development Best Practices - Twitter</h2>@components.modernize()</dt>
+                        <dd>
+                            <p>Twitter created a living document on GitHub to reflect its current “best practices” around core ideals: Always favor readability; write generic code but not at the expense of clarity; take advantage of simple language features that afford great power but avoid the esoteric ones (especially in the type system). This guide attempts to distill their experience into short essays, providing a set of best practices that might be useful for your newbies.</p>
+                            <a target="_blank" href="http://twitter.github.io/effectivescala/">Read The Developer Best Practice</a>
+                        </dd>
+
+                        <dt><h2>Introducing Scala To Experienced Java Devs - Workday</h2>@components.modernize()</dt>
+                        <dd>
+                            <p>Workday has been using Scala for a couple of years now. The availability of engineers with Scala experience is getting better. Most of the time, however, they are building their team by helping experienced Java developers become Scala developers. You can learn more about their approach on GitHub.</p>
+                            <a target="_blank" href="http://workday.github.io/scala/2014/01/09/scala-for-beginners/">Read The Developer Best Practice</a>
+                        </dd>
+                        
+                    </dl>
+            </article>
+
+            <span id="community-stories" class="anchor-jump"></span>
+            <article class="resource-section">
+                    <h2>Community Stories</h2><span class="expand"></span>
+                    <dl class="resource-list no-bullets">
+                        
+                        <dt><h2>75% Faster - Lucidchart</h2>@components.scalability()</dt>
+                        <dd>
+                            <p>Lucidchart is a fully functional diagramming application running inside the browser, which uses pure Javascript to create an experience that feels like a native app.</p>
+                            <p>Migrating to Scala and Play from a CakePHP setup is already paying off. Response times are down for processor intensive code - such as image and PDF generation – by around 75%.</p>
+                            <a target="_blank" href="https://www.lucidchart.com/techblog/2013/02/13/using-scala-to-handle-exponential-growth-at-a-startup-part-2/">Read The Community Story</a>
+                        </dd>
+
+                        <dt><h2>Tweets per Second Record -  Twitter</h2>@components.modernize()@components.scalability()</dt>
+                        <dd>
+                            <p>A primary goal at Twitter is to make sure the service is always available no matter what is happening around the world. This goal felt unattainable in 2010 with Ruby, so the team rewrote its codebase on Scala, delivering an estimated 10x performance increase.</p>
+                            <a target="_blank" href="https://blog.twitter.com/2013/new-tweets-per-second-record-and-how">Read The Community Story</a>
+                        </dd>
+
+                        <dt><h2>From PHP To Play/Scala - Huffington Post</h2>@components.modernize()@components.scalability()</dt>
+                        <dd>
+                            <p>John Pavley, CTO shares his perspectives on modernizing the infrastructure at the Huffington Post in this detailed engineering blog post.</p>
+                            <p>While keeping things simple, safe, and reusable can be done in PHP it takes a tremendous amount of effort. Scala enforces humanistic coding by default. You can write bad code with Scala but you have to work hard to do it.</p>
+                            <a target="_blank" href="http://www.huffingtonpost.com/john-pavley/huffpost-content-management-system_b_3739572.html">Read The Community Story</a>
+                        </dd>
+
+                        <dt><h2>From .NET To Play/Scala - Empathica</h2>@components.agile()@components.modernize()</dt>
+                        <dd>
+                            <p>This is a story about how Empathica as an organization transformed itself from being a Microsoft .NET shop to a Scala one. It didn’t happen overnight, and this is definitely not a how-to guide on how to achieve similar change somewhere else.  If you’re looking for a side by side comparison of Scala and C#/.NET, you won’t find it here.  This is just an account of how the change itself unfolded.</p>
+                            <a target="_blank" href="http://randonom.com/blog/2013/10/technology-change-net-to-scala/">Read The Community Story</a>
+                        </dd>
+                        
+                    </dl>
+            </article>
+
             <span id="presentations" class="anchor-jump"></span>
             <article class="resource-section">
                     <h2>Presentations</h2><span class="expand"></span>
                     <dl class="resource-list no-bullets">
-                        <dt><h2>This is a resource title thats long</h2>@components.productivity()@components.agile()</dt>
+
+                        <dt><h2>Scala Adoption Experience - Whitepages</h2>@components.agile()@components.modernize()@components.productivity()@components.scalability()</dt>
                         <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
+                            <p>In this use-case presentation, Sr. Architect Devin Ben-Hur addresses questions such as: How and why did we choose Scala? How did we go about training the team on the new language and technology stack? What has the adoption experience been for an engineering team rooted in dynamic languages?</p>
+                            <a target="_blank" href="https://docs.google.com/presentation/d/1jXMEQg_mWVYGtNdjcWKdmkSlN1CmyTekdL_PAqrS6Gw/edit#slide=id.g1096f1ddb_0266">View The Presentation</a>
                         </dd>
-                        <dt><h2>This is a resource title thats long</h2>@components.productivity()@components.agile()</dt>
-                        <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
-                        </dd>
-                        <dt><h2>This is a resource title thats long</h2>@components.productivity()@components.agile()</dt>
-                        <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
-                        </dd>
-                        <dt><h2>This is a resource title thats long</h2>@components.productivity()@components.agile()</dt>
-                        <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
-                        </dd>
+                        
                     </dl>
             </article>
-            <span id="templates" class="anchor-jump"></span>
-            <article class="resource-section">
-                    <h2>Templates</h2><span class="expand"></span>
-                    <dl class="resource-list no-bullets">
-                        <dt><h2>This is a resource title thats long</h2>@components.productivity()@components.agile()</dt>
-                        <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
-                        </dd>
-                        <dt><h2>This is a resource title thats long</h2>@components.productivity()@components.agile()</dt>
-                        <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
-                        </dd>
-                        <dt><h2>This is a resource title thats long</h2>@components.productivity()@components.agile()</dt>
-                        <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
-                        </dd>
-                        <dt><h2>This is a resource title thats long</h2>@components.productivity()@components.agile()</dt>
-                        <dd>
-                            <p>Nunc a sodales dolor. Donec eget elit luctus, molestie arcu vel, lacinia ipsum. Lorem ipsum dolor sit amet,posuere placerat mattis. Nunc et arcu porta, imperdiet turpis a, porta sapien.</p>
-                            <a target="_blank" href="#">Download the Case Study</a>
-                        </dd>
-                    </dl>
-            </article>
-            
-
-
 
         </div>
     </section>

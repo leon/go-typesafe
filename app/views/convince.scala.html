@@ -28,7 +28,7 @@
             </article>
             <span id="overview" class="anchor-jump"></span>
             <article>
-                    <h2>Overview@components.scalability()</h2>
+                    <h2>Overview@components.typesafeCircle()</h2>
                     <p>You’ve done it - you’ve built a small project and managed to convince your peers that the Typesafe Reactive Platform is the way that you can solve problems related to scalability, accelerating the productivity of your team and building modern, high quality applications.  Everyone is excited to start programming with the beauty of Scala, Akka and Play.  Only one thing left to do - convince the boss.</p> 
                     <p>Adoption of any new technology is challenging.  There are a number of factors that need to be carefully taken into account and managed properly to ensure that the costs of adoption end up being lower than the cost of non-adoption.  There are five topics that tend to be top of mind for managers and business leaders when assessing the adoption of Scala versus either other technologies or the maintenance of existing frameworks and libraries.</p>
             </article>
@@ -41,7 +41,7 @@
                     <p>In order to create a Scala team, there are two options - recruit or train.  With the popularity of Scala exploding, recruiting developers with more than a year’s worth of production Scala experience can be challenging and it is generally not cost effective or possible to staff an entire Scala team using recruitment alone.  A combination of targeted recruitment and a well structured onboarding including training, mentorship and support provides the strongest path to success.  </p>
 
                     <section class="resource-section">
-                        <h2>Adoption</h2><span class="expand"></span>
+                        <span class="expand"></span>
                         <dl class="resource-list no-bullets">
                             <dt><h2>A Pragmatic Guide To Scala Adoption - Zero Turnaround</h2>@components.modernize()</dt>
                             <dd>
@@ -60,7 +60,7 @@
                     <p>Training a Scala team, if done in a structured and focused way, should not be overly onerous and there are a lot of resources available.  Typesafe offers a series of 2-day corporate training options and Typesafe partners extend this to include practical, hands-on practice in the technologies along with mentorship.  Once training is complete, the Typesafe Subscription provides developers with support to ensure that they don’t get hung up with framework issues. </p>
 
                     <section class="resource-section">
-                        <h2>Adoption</h2><span class="expand"></span>
+                        <span class="expand"></span>
                         <dl class="resource-list no-bullets">
                             <dt><h2>Scala Development Best Practices - Twitter</h2>@components.modernize()</dt>
                             <dd>
@@ -82,7 +82,7 @@
                     <p>Executed correctly, and with the help of a Typesafe partner, an experienced developer can be brought up to competency with Scala in about 2 weeks.  Since Scala is so flexible and powerful, self learning can extend the learning curve significantly and impact the ability of the organization to fully realize the benefits of adopting the Typesafe Reactive Platform. Scala’s flexibility can be a challenge in self-led learning as inconsistencies can creep into the corporate code base.</p>
 
                     <section class="resource-section">
-                        <h2>Adoption</h2>
+                        
                         <dl class="resource-list no-bullets">
                             <dt><h2>Scala Adoption Experience - Whitepages</h2>@components.modernize()</dt>
                             <dd>
@@ -97,7 +97,7 @@
                     <p>Below is suggested Scala reading to help stimulate a self-learning environment for your team:</p>
 
                     <section class="resource-section">
-                        <h2>Adoption</h2><span class="expand"></span>
+                        <span class="expand"></span>
                         <dl class="resource-list no-bullets">
                             <!--
                             <dt><h2>Atomic Scala, by Bruce Eckel and Dianne Marsh</h2>@components.modernize()</dt>
@@ -191,7 +191,7 @@
 
                 <p>Scala’s immutable-first design is expressly built to enable developers to build applications that are safely multi-threaded.  With immutable data structures, it is impossible to create race conditions.  This makes it much safer to create code that is multi-threaded and can take advantage of the hardware.  </p>
                 <p>Play’s built-in use of the Netty framework and unique push/pull model of thread management allows the framework to intelligently use threads.  Play can accept a web connection on one thread, maintain the connection, drop the thread when there is a long-running process such as a database request and allocate a new thread to service the request when the process returns.</p> 
-                <p>Akka is built for scalability and provides applications with a distributed-by-design and isolation of functionality using the actor model.  Akka provides the ability to create large scale, distributed systems with built in failure management through a supervisor heirarchy and lends itself well to …</p>
+                <p>Akka is built for scalability and provides applications with a distributed-by-design and isolation of functionality using the actor model.  Akka provides the ability to create large scale, distributed systems with built in failure management through a supervisor hierarchies and lends itself well to highly concurrent applications where responsiveness, resiliency, and scalability are critical.</p>
             </article>
             <span id="effect" class="anchor-jump"></span>
             <article>
@@ -216,7 +216,7 @@
 
                 <p>The Play Framework provides strong productivity enhancements over traditional compiled web frameworks like J2EE or .NET.  Its RESTful, MVC-focused architecture means that generating a web application with persistence is extremely rapid.  In addition, its “just refresh” style of development is reminiscent of dynamic languages such as Ruby, PHP and Python while still offering the performance and maintainability benefits of compiled code.  </p>
 
-                <p>Akka Description Goes Here</p>
+                <p>Akka is an asynchronous event-driven middleware for building high performance and reliable distributed applications. Akka decouples business logic from low-level mechanisms such as threads, locks and non-blocking I/O. Java and Scala program logic lives in lightweight Actor objects, which send and receive messages in a reactive fashion. With Akka, you can easily configure how Actors will be created, destroyed, scheduled, and how to deal with failures.</p>
 
                 
 
