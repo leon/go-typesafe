@@ -620,6 +620,7 @@ dl.resource-list {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      text-transform: capitalize;
       max-width: 50%;
       @media only screen and (min-width: 40.063em) {
         max-width: 65%;
@@ -674,15 +675,26 @@ dl.resource-list {
     
   }   
 }
-.resource-section h2 {
-  margin-bottom: 0;
+.resource-section {
+  padding-top: 0;
+  > h1, > h2 {
+    margin: 0;
+    display: inline-block;
+    float: left;
+    width: auto;
+    font-size: 1.2em;
+    line-height: 50px;
+
+  }
 }
 span.expand, span.collapse {
-  display: block;
+  display: inline-block;
   float: right;
-  padding: 10px;
+  font-size: .8em;
+  line-height: 50px;
+  padding-right: 10px;
   cursor: pointer;
-  margin-top: -32px;
+  margin: 0;
 }
 
 .expand:before {
