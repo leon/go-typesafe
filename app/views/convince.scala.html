@@ -29,7 +29,7 @@
             <span id="overview" class="anchor-jump"></span>
             <article>
                     <h2>Overview@components.scalability()</h2>
-                    <p>You’ve done it - you’ve built a small project and managed to convince your peers that the Typesafe Reactive Platform is the way that you can solve problems related to scalability, accelerate the productivity of your team and build modern, high quality applications.  Everyone is excited to start programming with the beauty of Scala.  Only one thing left to do - convince the boss.</p> 
+                    <p>You’ve done it - you’ve built a small project and managed to convince your peers that the Typesafe Reactive Platform is the way that you can solve problems related to scalability, accelerating the productivity of your team and building modern, high quality applications.  Everyone is excited to start programming with the beauty of Scala, Akka and Play.  Only one thing left to do - convince the boss.</p> 
                     <p>Adoption of any new technology is challenging.  There are a number of factors that need to be carefully taken into account and managed properly to ensure that the costs of adoption end up being lower than the cost of non-adoption.  There are five topics that tend to be top of mind for managers and business leaders when assessing the adoption of Scala versus either other technologies or the maintenance of existing frameworks and libraries.</p>
             </article>
             <span id="scalateam" class="anchor-jump"></span>
@@ -37,63 +37,89 @@
                     <h2>Creating Your Scala Team@components.scalability()</h2>
                     <p>Training staff on new technology or recruiting experts is a cost that doesn’t exist when a corporation sticks to their existing technologies.  As such, it’s important that the impact of the adoption of the Typesafe Reactive Platform is emphasized in any discussion of creating a Scala team.  Developers working in the Typesafe Reactive Platform will be able to create higher quality software more quickly that scales better than legacy platforms. </p>
 
-                    <blockquote class="">
-                        <p>In the past we've used PHP, MySQL, HTML, and JavaScript but those technologies, the workhorses of Internet applications, are no longer yearlings. Scala was built on top of the environment of the older and well tested language Java. So Scala gets the benefits of Java's performance and stability while enabling developers to write simpler, more robust, and more reusable code. While keeping things simple, safe, and reusable can be done in PHP it takes a tremendous amount of effort. Scala enforces humanistic coding by default. You can write bad code with Scala but you have to work hard to do it.</p>
-                        <footer><strong>John Pavley</strong>CTO, Huffington Post</footer>
-                    </blockquote>
 
                     <p>In order to create a Scala team, there are two options - recruit or train.  With the popularity of Scala exploding, recruiting developers with more than a year’s worth of production Scala experience can be challenging and it is generally not cost effective or possible to staff an entire Scala team using recruitment alone.  A combination of targeted recruitment and a well structured onboarding including training, mentorship and support provides the strongest path to success.  </p>
 
-                    <blockquote class="red">
-                        <p>In the last few years there has been some criticism of Scala; it's mostly been accused of being too complex. In this report, we opine that the perceived complexity of Scala actually arises more from the diversity of the ecosystem rather than the language itself. We then look at a simpler subset of Scala that is perhaps a good place to start for Java teams.</p>
-                        <footer><strong>Zero Turnaround, Scala 2013</strong>A Pragmatic Guide To Scala Adoption in Your Java Organization</footer>
-                    </blockquote>
-
-                    <section class="asset">
-                        <h4>Dianne Marsh: Learning Scala</h4>
-                        <p>Dianne Marsh, Director of Engineering for Cloud Tools at Netflix, explores best practices for learning Scala in this 30-minute introductory video.</p>
-                        <a href="https://www.youtube.com/watch?v=h4oMUyjL3mQ" class="btn small">Watch Dianne Marsh: Learning Scala</a>
+                    <section class="resource-section">
+                        <h2>Adoption</h2><span class="expand"></span>
+                        <dl class="resource-list no-bullets">
+                            <dt><h2>A Pragmatic Guide To Scala Adoption - Zero Turnaround</h2>@components.modernize()</dt>
+                            <dd>
+                                <p>In the last few years there has been some criticism of Scala; it’s mostly been accused of being too complex. In this report, Zero Turnaround opines that the perceived complexity of Scala actually arises more from the diversity of the ecosystem rather than the language itself. Then they take a look at a simpler subset of Scala that is perhaps a good place to start for Java teams. </p>
+                                <a target="_blank" href="http://pages.zeroturnaround.com/rs/zeroturnaround/images/Scala2013-A-Pragmatic-Guide-To-Adoption.pdf" class="btn small">Read The Report</a>
+                            </dd>
+                            <dt><h2>Learning Scala - Netflix</h2>@components.modernize()</dt>
+                            <dd>
+                                <p>Dianne Marsh, Director of Engineering for Cloud Tools at Netflix and co-author of Atomic Scala, explores best practices for learning Scala in this 30-minute introductory video.</p>
+                                <a target="_blank" href="https://www.youtube.com/watch?v=h4oMUyjL3mQ" class="btn small">Watch The Video</a>
+                            </dd>
                     </section>
+
+                    
 
                     <p>Training a Scala team, if done in a structured and focused way, should not be overly onerous and there are a lot of resources available.  Typesafe offers a series of 2-day corporate training options and Typesafe partners extend this to include practical, hands-on practice in the technologies along with mentorship.  Once training is complete, the Typesafe Subscription provides developers with support to ensure that they don’t get hung up with framework issues. </p>
 
-                    <blockquote class="red">
-                        <p>Scala is one of the main application programming languages used at Twitter. Much of our infrastructure is written in Scala and we have several large libraries supporting our use. While highly effective, Scala is also a large language, and our experiences have taught us to practice great care in its application. This guide attempts to distill our experience into short essays, providing a set of best practices.</p>
-                        <footer><strong>Marius Eriksen</strong>Twitter Inc.</footer>
-                    </blockquote>
+                    <section class="resource-section">
+                        <h2>Adoption</h2><span class="expand"></span>
+                        <dl class="resource-list no-bullets">
+                            <dt><h2>Scala Development Best Practices - Twitter</h2>@components.modernize()</dt>
+                            <dd>
+                                <p>Twitter created a living document on GitHub to reflect its current “best practices” around core ideals: Always favor readability; write generic code but not at the expense of clarity; take advantage of simple language features that afford great power but avoid the esoteric ones (especially in the type system). This guide attempts to distill their experience into short essays, providing a set of best practices that might be useful for your newbies.</p>
+                                <a target="_blank" href="http://twitter.github.io/effectivescala/" class="btn small">Read the developer best practice</a>
+                            </dd>
+                            <dt><h2>Introducing Scala To Experienced Java Devs - Workday</h2>@components.modernize()</dt>
+                            <dd>
+                                <p>Workday has been using Scala for a couple of years now. The availability of engineers with Scala experience is getting better. Most of the time, however, they are building their team by helping experienced Java developers become Scala developers. You can learn more about their approach on GitHub.</p>
+                                <a target="_blank" href="http://workday.github.io/scala/2014/01/09/scala-for-beginners/" class="btn small">Read the developer best practice</a>
+                            </dd>
+                        </dl>
+                    </section>
 
-                    <blockquote class="red">
-                        <p>At Workday, we've been using Scala for a couple of years now. The availability of engineers with Scala experience is getting better: starting from zero the only way is up! Most of the time we try to help experienced Java developers become Scala developers. <a href="http://workday.github.io/scala/2014/01/09/scala-for-beginners/">Here's how we approach the problem.</a></p>
-                        <footer><strong>NAME</strong>ATT</footer>
-                    </blockquote>
+                    
 
                     
 
                     <p>Executed correctly, and with the help of a Typesafe partner, an experienced developer can be brought up to competency with Scala in about 2 weeks.  Since Scala is so flexible and powerful, self learning can extend the learning curve significantly and impact the ability of the organization to fully realize the benefits of adopting the Typesafe Reactive Platform. Scala’s flexibility can be a challenge in self-led learning as inconsistencies can creep into the corporate code base.</p>
 
-                    <blockquote class="red">
-                        <p>QUOTE</p>
-                        <footer><strong>NAME</strong>ATT</footer>
-                    </blockquote>
+                    <section class="resource-section">
+                        <h2>Adoption</h2>
+                        <dl class="resource-list no-bullets">
+                            <dt><h2>Scala Adoption Experience - Whitepages</h2>@components.modernize()</dt>
+                            <dd>
+                                <p>In this use-case presentation, Sr. Architect Devin Ben-Hur addresses questions such as: How and why did we choose Scala? How did we go about training the team on the new language and technology stack? What has the adoption experience been for an engineering team rooted in dynamic languages?</p>
+                                <a target="_blank" href="https://docs.google.com/presentation/d/1jXMEQg_mWVYGtNdjcWKdmkSlN1CmyTekdL_PAqrS6Gw/edit#slide=id.g1096f1ddb_0266" class="btn small">View the presentation</a>
+                            </dd>
+                        </dl>
+                    </section>
 
-                    <blockquote class="red">
-                        <p>QUOTE</p>
-                        <footer><strong>NAME</strong>ATT</footer>
-                    </blockquote>
+                    
 
-                    <p>Below is suggested reading to help stimulate a self-learning environment for your team:</p>
-                    <p>Atomic Scala, by Bruce Eckel and Dianne Marsh<br> Bruce and Dianne observed that it would be possible to teach Scala to a beginning programmer and, if they did things right, it would actually be an easier language to learn than Java. The goal of this book is to bridge the gap between the beginner books—either beginning programmer, or just Scala beginner with experience in another language—and the rest of the books out there. If Bruce and Dianne can get you past this first set of hurdles, then you’ll be ready for the next step, probably Cay Horstman's, Scala for the Impatient.</p>
-                    <dl class="resource-list no-bullets">
-                    <dt><h2>Boosting Quality with Akka/Scala - CCAD (Comcast spinoff)</h2>@components.productivity()</dt>
-                    <dd>
-                        <p>CCAD (Combined Conditional Access Development) is a joint venture between Comcast and Arris Group (which acquired Motorola Home).</p>
-                        <p>Scaling developer productivity, improving code quality and removing locking and contention were reasons that influenced CCAD’s decision to move away from the traditional Java-based stack they were using to look for more sustainable alternatives.</p>
-                        <a target="_blank" href="http://downloads.typesafe.com/website/casestudies/CCAD-Case-Study.pdf" class="btn small">Read the Case Study</a>
-                    </dd>
-                </dl>
-                    <p>Scala for the Impatient, by Cay Hortzman</p>
-                    <p>Every concept and technique in Scala for the Impatient is presented in "blog-size" chunks that can be digested quickly and reviewed as needed for specific tasks. Horstmann offers hands-on activities that guide readers through four well-defined stages of competency: basic, intermediate, advanced and expert. </p>
-                    <p>Scala in Depth, by Typesafe technical staff member Josh Suereth This is a unique book designed to help you integrate Scala effectively into your development process. By presenting the emerging best practices and designs from the Scala community, it guides you through dozens of powerful techniques example by example. There's little heavy-handed theory here—just dozens of crisp, practical techniques for coding in Scala. Written for readers who know Java, Scala, or another OO language.</p>
+                    <p>Below is suggested Scala reading to help stimulate a self-learning environment for your team:</p>
+
+                    <section class="resource-section">
+                        <h2>Adoption</h2><span class="expand"></span>
+                        <dl class="resource-list no-bullets">
+                            <!--
+                            <dt><h2>Atomic Scala, by Bruce Eckel and Dianne Marsh</h2>@components.modernize()</dt>
+                            <dd>
+                                <p>Bruce Eckel and Dianne observed that it would be possible to teach Scala to a beginning programmer and, if they did things right, it would actually be an easier language to learn than Java. The goal of this book is to bridge the gap between the beginner books—either beginning programmer, or just Scala beginner with experience in another language—and the rest of the books out there. If Bruce and Dianne can get you past this first set of hurdles, then you’ll be ready for the next step, probably Cay Horstman's, Scala for the Impatient.</p>
+                                <a target="_blank" href="#" class="btn small">Download the free E-Book</a>
+                            </dd>
+                            -->
+                            <dt><h2>Scala for the Impatient, by Cay Hortzman</h2>@components.modernize()</dt>
+                            <dd>
+                                <p>Every concept and technique in Scala for the Impatient is presented in "blog-size" chunks that can be digested quickly and reviewed as needed for specific tasks. Horstmann offers hands-on activities that guide readers through four well-defined stages of competency: basic, intermediate, advanced and expert</p>
+                                <a target="_blank" href="http://www.typesafe.com/resources/free-books" class="btn small">Download the free E-Book</a>
+                            </dd>
+                            <dt><h2>Scala in Depth, by Typesafe technical staff member Josh Suereth</h2>@components.modernize()</dt>
+                            <dd>
+                                <p>This is a unique book designed to help you integrate Scala effectively into your development process. By presenting the emerging best practices and designs from the Scala community, it guides you through dozens of powerful techniques example by example. There's little heavy-handed theory here—just dozens of crisp, practical techniques for coding in Scala. Written for readers who know Java, Scala, or another OO language.</p>
+                                <a target="_blank" href="http://www.typesafe.com/resources/free-books" class="btn small">Download the free E-Book</a>
+                            </dd>
+                        </dl>
+                    </section>
+
+                    
 
 
             </article>
@@ -103,55 +129,64 @@
                 <h2>The History and Longevity of Scala@components.scalability()</h2>
                 <p>When making an investment in new technology, organizations need to be sure that the technology has the longevity to return that investment.  In addition, enterprises need to ensure that their technology choices are proven and stable before they adopt.  Enterprise software typically has a 10-year or longer lifetime and the technology base that it is built on needs to match.  </p>
 
-                <img src="">
+                <img src="@routes.Assets.at("images/jvm-languages.png")" class="img-box">
 
                 <p>Scala’s design was started in 2001 and the first release was in 2003.  The versions are stable and it is being used in a wide variety of large-scale, mission critical systems, most notably in the financial, media and social media sectors.  Scala is also enjoying a meteoric rise in popularity from below 50th rank on the TIOBE programming language rankings in 2012 to 31st in 2013 and up to 12th in the RedMonk Language Popularity Rankings.  The influential ThoughtWorks Technology Radar has put Scala into its “Adopt” category, indicating that it has crossed a threshold and they recommend adoption among enterprise software developers. </p>
                 <p>One of the best indicators of Scala’s increasing popularity is that many of the new features included in the upcoming Java 8 release have been inspired by Scala.  While the Java 8 implementations are generally simplified and do not provide the same power and benefits of the Scala implementations, the adoption of those kinds of features supports the notion that Scala’s time has come. </p>
 
-                <blockquote class="red">
-                    <a href="http://www.infoworld.com/t/java-programming/survey-developers-eager-java-8-237462"><p>Lambdas bring functional programming, a specialty of Scala, to Java 8, Boner said. "People often ask us if lambdas coming to Java will slow the adoption of Scala. We believe the acceptance of these features by the Java Community Process validates our innovation in language design on the JVM and will help to accelerate Scala adoption,"  the report said. Java 8 still is lacking in terms of functional programming, such as libraries, Boner said, noting that "Scala was built being object-oriented and functional from the start, and Java has added it as an afterthought.</p></a>
-                    <footer><strong>InfoWorld</strong>InfoWorld Tech Watch</footer>
-                </blockquote>
+                <section class="resource-section">
+                    <dl class="resource-list no-bullets">
+                        <dt><h2>Martin Odersky Discusses Scala And Java 8 - ReadWrite</h2>@components.modernize()</dt>
+                        <dd>
+                            <p>People often ask me if lambdas coming to Java will slow the adoption of Scala. Quite the opposite! Instead, I feel the acceptance of these features by the Java Community Process validates our innovation in language design on the JVM. As developers come to understand what these features are and how they work, they will also develop a better appreciation of the more extensive support of functional programming that Scala provides.</p>
+                            <a target="_blank" href="http://readwrite.com/2014/02/20/java-8-scala-competitors-bffs-martin-odersky#awesm=~oyYVt8SebegL7W" class="btn small">Read The Article</a>
+                        </dd>
+                    </dl>
+                </section>
 
+                
 
                 <p>Scala and the Typesafe Reactive Platform have been enjoying rapid adoption in large part due to recent evolutions in hardware.  Hardware is becoming increasingly parallel, with a deep focus on increasing the aggregate multi-threaded performance of systems rather than increasing the speed of a single thread.  As such, traditional server approaches that provide developers with a single threaded abstraction and multiplex requests at the process level are becoming less and less efficient.  The Typesafe Reactive Platform allows developers to more easily create applications that have built-in multi-threading capabilities and that can fully leverage these new hardware designs.</p>
+                <p>Adoption of Scala is low risk due to the stability and history of the platform and language, the fact that it runs on the JVM and the rising popularity of functional programming as evidenced by its incorporation in Java 8 and its alignment with modern hardware design. </p>
 
-                <blockquote class="red">
-                    <a href="http://code.tutsplus.com/articles/interview-with-eric-bowman-of-giltcom--net-35653"><p>Over the course of a few seconds, Gilt’s traffic can increase by as much as 100x. Essentially, they need to have the e-commerce infrastructure almost at Amazon scale for at least 15 minutes every day. Most days this happens exactly at noon EST, and until a couple of years ago, noon was a stressful time every day. Nowadays it’s usually a non-event—in part because of Typesafe. This Q&A with architect Eric Bowman describes Gilt Groupe's journey from Rails to Reactive.</p></a>
-                    <footer><strong>tuts+</strong>Interview With Eric Bowman of Gilt.com</footer>
-                </blockquote>
+                <section class="resource-section">
+                    <dl class="resource-list no-bullets">
+                        <dt><h2>VP Engineering Discusses Trust in JVM/Scala - Twitter</h2></dt>
+                        <dd>
+                            <p>"There was a level of trust that we all had in the JVM. We were confident we could pull off a sea change for Twitter in the world of the JVM. We estimated that rewriting our codebase [in Scala] could get us > 10x performance."" Raffi Krikorian, VP, Platform Engineering, Twitter</p>
+                            <a target="_blank" href="https://blog.twitter.com/2013/new-tweets-per-second-record-and-how" class="btn small">Read the community story</a>
+                        </dd>
+                    </dl>
+                </section>
 
-                <p>Adoption of Scala is low risk due to the stability and history of the platform and language, the fact that it runs on the JVM and the rising popularity of functional programming as evidenced by its incorporation in Java 8 and its alignment with modern hardware design.</p>
+                
 
-                <blockquote class="red">
-                    <p>There was a level of trust that we all had in the JVM. We were confident we could pull off a sea change for Twitter in the world of the JVM. We estimated that rewriting our codebase [in Scala] could get us > 10x performance.</p>
-                    <footer><strong>Raffi Krikorian</strong>VP, Platform Engineering, Twitter</footer>
-                </blockquote>
 
             </article>
             <span id="integration" class="anchor-jump"></span>
             <article>
                 <h2>Integration of Scala with Enterprise Tools@components.scalability()</h2>
-                <p>As organizations build systems to run their businesses, there is a corresponding build up of infrastructure to support those systems.  This includes things like server infrastructure, monitoring systems, logging systems, development tools, debugging and performance management tools.  Scala, unlike many new technologies, has the advantage of running on the JVM and easily integrating with existing JVM infrastructure.  Developers comfortable with IntelliJ IDEA or Eclipse need only install a plugin to start working with full syntax highlighting in Scala.  Existing libraries and code bases built in Java can be directly used and integrated into new Scala projects.  Performance and monitoring tools that work with at the JVM level will work with Scala based systems and some, such as New Relic, have specific Scala integration. </p>
+                <p>As organizations build systems to run their businesses, there is a corresponding build up of infrastructure to support those systems.  This includes things like server infrastructure, monitoring systems, logging systems, development tools, debugging and performance management tools.</p>
 
-                <p>Scala, unlike many new technologies, has the advantage of running on the JVM and easily integrating with existing JVM infrastructure.  Developers comfortable with IntelliJ IDEA or Eclipse need only install a plugin to start working with full syntax highlighting in Scala.  Existing libraries and code bases built in Java can be directly used and integrated into new Scala projects.  Performance and monitoring tools that work with at the JVM level will work with Scala based systems and some, such as New Relic, have specific Scala integration</p>
-
-                <blockquote class="red">
-                    <p>Our algorithms needed to be efficient, scaling at worst linearly with the quantity of content in the system. Developers were quickly productive with Scala because of their familiarity with Java.</p>
-                    <footer><strong>Robert Slifka</strong>Vice President of Engineering, Sharethrough</footer>
-                </blockquote>
-
+                <p>Scala, unlike many new technologies, has the advantage of running on the JVM and easily integrating with existing JVM infrastructure.  Developers comfortable with IntelliJ IDEA or Eclipse need only install a plugin to start working with full syntax highlighting in Scala.  Existing libraries and code bases built in Java can be directly used and integrated into new Scala projects.  Performance and monitoring tools that work with at the JVM level will work with Scala based systems and some, such as New Relic, have specific Scala integration. </p>
                 <p>In general, any team currently using Java can switch to Scala development with minimal impact on tools and infrastructure. </p>
+
             </article>
             <span id="ease" class="anchor-jump"></span>
+            
             <article>
                 <h2>Ease of Scalability with Scala and Akka@components.scalability()</h2>
                 <p>As hardware becomes increasingly focused on multi-threaded performance and software increasingly centralized for larger and larger numbers of users, there is a growing need for software designers to build multi-threaded and high performance systems. Scala, Play and Akka all handle this challenge in specific ways that will increasingly become the norm for prudent application design. </p>
 
-                <blockquote class="red">
-                    <a href="http://code.tutsplus.com/articles/interview-with-eric-bowman-of-giltcom--net-35653"><p>Over the course of a few seconds, Gilt’s traffic can increase by as much as 100x. Essentially, they need to have the e-commerce infrastructure almost at Amazon scale for at least 15 minutes every day. Most days this happens exactly at noon EST, and until a couple of years ago, noon was a stressful time every day. Nowadays it’s usually a non-event—in part because of Typesafe. This Q&A with architect Eric Bowman describes Gilt Groupe's journey from Rails to Reactive.</p></a>
-                    <footer><strong>tuts+</strong>Interview With Eric Bowman of Gilt.com</footer>
-                </blockquote>
+                <section class="resource-section">
+                    <dl class="resource-list no-bullets">
+                        <dt><h2>Architect Discusses Scaling For Bursty Traffic - Gilt</h2>@components.modernize()@components.scalability()</dt>
+                        <dd>
+                            <p>Over the course of a few seconds, Gilt’s traffic can increase by as much as 100x. Essentially, they need to have the e-commerce infrastructure almost at Amazon scale for at least 15 minutes every day.</p>
+                            <a target="_blank" href="http://code.tutsplus.com/articles/interview-with-eric-bowman-of-giltcom--net-35653" class="btn small">Read The Article</a>
+                        </dd>
+                    </dl>
+                </section>
 
 
                 <p>Scala’s immutable-first design is expressly built to enable developers to build applications that are safely multi-threaded.  With immutable data structures, it is impossible to create race conditions.  This makes it much safer to create code that is multi-threaded and can take advantage of the hardware.  </p>
@@ -161,36 +196,31 @@
             <span id="effect" class="anchor-jump"></span>
             <article>
                 <h2>Effect on Developer Productivity@components.scalability()</h2>
-                <p>Scala, Akka and Play provide strong benefits in terms of developer productivity.  The Scala language, in particular, requires far less boilerplate and lines of code than a typical Java application performing the same function. This terseness can reduce code base sizes by over 50%.  There have also been studies that have shown that dense code, in the Scala style, are easier to understand. Scala puts more of the logic on one page of text, providing developers with the ability to more easily reason about the effect of the code in front of them. Well designed Scala also makes more use of functional code with fewer side-effects, providing developers with more opportunity for safe reuse of code segments.</p>
-                <p>There have also been studies that have shown that dense code, in the Scala style, are easier to understand.  Scala puts more of the logic on one page of text, providing developers with the ability to more easily reason about the effect of the code in front of them.  Well designed Scala also makes more use of functional code with fewer side-effects, providing developers with more opportunity for safe reuse of code segments. </p>
-
-                <blockquote class="red">
-                    <a href="http://infoscience.epfl.ch/record/138586"><p>The research paper of Gilles Dubochet at EPFL reports, on average, it is 30% faster to comprehend algorithms that use for-comprehensions and maps, as in Scala, rather than those with the iterative while-loops of Java.</p></a>
-                    <footer><strong>Inforscience, EPFL</strong>Research Paper</footer>
-                </blockquote>
-
-                <blockquote class="red">
-                    <a href="http://www.grahamlea.com/2013/02/survey-results-are-developers-more-productive-in-scala/"><p>The survey created by Graham Lea regarding the perceived productivity gains of Scala developers shows that Java programmers who learn Scala generally feel more productive pretty much straight away.</p></a>
-                    <footer><strong>Graham Lea</strong>Research Paper</footer>
-                </blockquote>
-
+                <p>Scala, Akka and Play provide strong benefits in terms of developer productivity.  The Scala language, in particular, requires far less boilerplate and lines of code than a typical Java application performing the same function.  This terseness can reduce code base sizes by over 50%. </p>
+                <p>There have also been studies that have shown that dense code, in the Scala style, are easier to understand.  Scala puts more of the logic on one page of text, providing developers with the ability to more easily reason about the effect of the code in front of them.  Well designed Scala also makes more use of functional code with fewer side-effects, providing developers with more opportunity for safe reuse of code segments.</p>
+                <section class="resource-section">
+                    <span class="expand"></span>
+                    <dl class="resource-list no-bullets">
+                        <dt><h2>Developer Comprehension 30% Faster - Research</h2>@components.modernize()@components.productivity()</dt>
+                        <dd>
+                            <p>The research paper of Gilles Dubochet at EPFL reports, on average, it is 30% faster to comprehend algorithms that use for-comprehensions and maps, as in Scala, rather than those with the iterative while-loops of Java.</p>
+                            <a target="_blank" href="http://infoscience.epfl.ch/record/138586" class="btn small">Read the Report</a>
+                        </dd>
+                        <dt><h2>Java-To-Scala Devs Feel More Productive - Research</h2>@components.modernize()@components.productivity()</dt>
+                        <dd>
+                            <p>The survey created by Graham Lea regarding the perceived productivity gains of Scala developers shows that Java programmers who learn Scala generally feel more productive pretty much straight away.</p>
+                            <a target="_blank" href="http://www.grahamlea.com/2013/02/survey-results-are-developers-more-productive-in-scala/" class="btn small">Read the Report</a>
+                        </dd>
+                    </dl>
+                </section>
 
                 <p>The Play Framework provides strong productivity enhancements over traditional compiled web frameworks like J2EE or .NET.  Its RESTful, MVC-focused architecture means that generating a web application with persistence is extremely rapid.  In addition, its “just refresh” style of development is reminiscent of dynamic languages such as Ruby, PHP and Python while still offering the performance and maintainability benefits of compiled code.  </p>
 
-                <blockquote class="red">
-                    <p>We've found that Play is one of the few frameworks that is able to maintain the delicate balance of performance, reliability, and developer productivity.</p>
-                    <footer><strong>Yevgeniy Brikman</strong>Software Engineer, LinkedIn</footer>
-                </blockquote>
-
                 <p>Akka Description Goes Here</p>
 
-                <h3>Tapad Case Study</h3>
-                <p>Tapad allows advertisers to employ consistent ads across multiple platforms: home computers, tablets, smartphones, and now even smart televisions. With advertiser SLAs <em>measured in milliseconds</em>, Tadpad turned to the Typesafe Reactive Platform of Play Framework, Akka and Scala to reliably <em>process 150 billion data points</em> from cookies, cellphone IDs, Wi-Fi connections, and other inputs</p>
+                
 
-                <blockquote class="red">
-                    <p>Our system is highly concurrent, and the Actor implementation from Akka makes it startlingly simple to write comprehensible code that leverages all the cores in our production machines.</p>
-                    <footer><strong>Dag Liodden</strong>CTO and Co-founder, Tapad</footer>
-                </blockquote>
+                
             </article>
 
 
