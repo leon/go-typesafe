@@ -275,10 +275,10 @@ nav.tab-bar {
     right: 10px;
     p {
       position: absolute;
-      right: 60px;
+      right: 40px;
       top: 20px;
       font-size: 0.8em;
-      width: 60px;
+      width: 80px;
       display: none;
       @media only screen and (min-width: 40.063em) {
         display: inline-block;
@@ -313,6 +313,11 @@ nav.tab-bar {
 
 .left-off-canvas-menu {
   background-color: @slate;
+  > p {
+    color: @white-dkr;
+    font-size: .8em;
+    padding: 1em;
+  }
 }
 .move-right {
   a.exit-off-canvas, a.exit-off-canvas:hover {
@@ -935,15 +940,19 @@ span.expand, span.collapse {
         overflow: hidden;
         text-align: center;
       }
-      &:hover span {
-        -webkit-transform: translateX(300%);
-        -moz-transform: translateX(300%);
-        -ms-transform: translateX(300%);
-        transform: translateX(300%);
+      @media only screen and (min-width: 40.063em) {
+        &:hover span {
+          -webkit-transform: translateX(300%);
+          -moz-transform: translateX(300%);
+          -ms-transform: translateX(300%);
+          transform: translateX(300%);
+        }
+          &:hover:before {
+          left: 0;
+        }
       }
-      &:hover:before {
-        left: 0;
-      }
+      
+      
     }
     &.go-circle {
         position: absolute;
