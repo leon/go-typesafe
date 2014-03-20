@@ -11,10 +11,9 @@
         <div class="small-11 medium-9 large-8 small-centered columns">
             <nav>
                 @components.agile()
-                <h2>Agility & Quality / Show Off</h2>
+                <h2>Agility & Quality</h2>
             </nav>
-            @intro()
-
+            @components.stepOne()
             <p class="bullet-setup">Want to show off the benefits of type-safety?</p>
             <ol>
                 <li><a href="http://typesafe.com/platform/getstarted" target="_blank">Download Typesafe Activator</a></li>
@@ -36,7 +35,7 @@
                 <li>Copy the generated zip file to a different machine / server, extract the zip, and run the start script in the <code>bin</code> directory</li>
             </ol>
             
-            <p class="bullet-setup">Of-course deployment can be even more agile when you combine the Typesafe Reactive Platform with tools and services like Heroku, Docker, Mesos, etc.</p>
+            <p>Of-course deployment can be even more agile when you combine the Typesafe Reactive Platform with tools and services like Heroku, Docker, Mesos, etc.</p>
             
             <footer>
                 <a href="@routes.Application.agilityQualityGetProof()" class="btn arrow-right">Next: Agility & Quality / Get Proof</a>
