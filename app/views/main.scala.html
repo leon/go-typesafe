@@ -27,9 +27,10 @@
                 <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
               </section>
               <section class="middle tab-bar-section">
-                <h1 class="title"><a href="@routes.Application.index()">Go Typesafe</a></h1>
+                <h1 class="title"><a href="@routes.Application.index()">Go Typesafe</a></h1><a href="http://www.typesafe.com" class="typesafe-link">@components.typesafeIcon()</a>
               </section>
               <section class="support">
+                <p>Need Help?</p>
                 <span id="trigger-overlay">@components.support()</span>
               </section>
             </nav>
@@ -90,7 +91,7 @@
             <button type="button" class="overlay-close">Close</button>
             <section id="support" class="row">
                 <div class="small-11 medium-9 large-8 small-centered columns">
-                    <h1>Need Help, Contact Typesafe.</h1>
+                    <h1 class="form-title">Need Help, Contact Typesafe.</h1>
                     <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
                         <input type="hidden" name="oid" value="00DC0000000QlWU">
                         <input type="hidden" name="retURL" value="http://scaladays.org/thank-you.html">
