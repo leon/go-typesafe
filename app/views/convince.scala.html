@@ -22,7 +22,7 @@
                     <li><a href="#scalateam">Creating Your Scala Team</a></li>
                     <li><a href="#history">The History and Longevity of Scala</a></li>
                     <li><a href="#integration">Integration of Scala with Enterprise Tools</a></li>
-                    <li><a href="#ease">Ease of Scalability with Scala and Akka</a></li>
+                    <li><a href="#ease">Ease of Scalability with Play Framework, Akka, and Scala</a></li>
                     <li><a href="#effect">Effect on Developer Productivity</a></li>
                 </ul>
             </article>
@@ -175,7 +175,7 @@
             <span id="ease" class="anchor-jump"></span>
             
             <article>
-                <h2>@components.scalability()Ease of Scalability with Scala and Akka</h2>
+                <h2>@components.scalability()Ease of Scalability with Play Framework, Akka, and Scala</h2>
                 <p>As hardware becomes increasingly focused on multi-threaded performance and software increasingly centralized for larger and larger numbers of users, there is a growing need for software designers to build multi-threaded and high performance systems. Scala, Play and Akka all handle this challenge in specific ways that will increasingly become the norm for prudent application design. </p>
 
                 <section class="resource-section">
@@ -189,9 +189,9 @@
                 </section>
 
 
-                <p>Scala’s immutable-first design is expressly built to enable developers to build applications that are safely multi-threaded.  With immutable data structures, it is impossible to create race conditions.  This makes it much safer to create code that is multi-threaded and can take advantage of the hardware.  </p>
-                <p>Play’s built-in use of the Netty framework and unique push/pull model of thread management allows the framework to intelligently use threads.  Play can accept a web connection on one thread, maintain the connection, drop the thread when there is a long-running process such as a database request and allocate a new thread to service the request when the process returns.</p> 
+                <p>Play’s built-in use of the Netty framework and unique push/pull model of thread management allows the framework to intelligently use threads.  Play can accept a web connection on one thread, maintain the connection, drop the thread when there is a long-running process such as a database request and allocate a new thread to service the request when the process returns.</p>
                 <p>Akka is built for scalability and provides applications with a distributed-by-design and isolation of functionality using the actor model.  Akka provides the ability to create large scale, distributed systems with built in failure management through a supervisor hierarchies and lends itself well to highly concurrent applications where responsiveness, resiliency, and scalability are critical.</p>
+                <p>Scala’s immutable-first design is expressly built to enable developers to build applications that are safely multi-threaded.  With immutable data structures, it is impossible to create race conditions.  This makes it much safer to create code that is multi-threaded and can take advantage of the hardware.  </p>
             </article>
             <span id="effect" class="anchor-jump"></span>
             <article>
