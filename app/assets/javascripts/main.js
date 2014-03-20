@@ -141,7 +141,6 @@ if ( typeof define === 'function' && define.amd ) {
   })
 
   $('.off-canvas-wrap').scroll( function(){
-        console.log($(this).scrollTop());
         if ($(this).scrollTop() <= 60) {
             $("#key").addClass("hidden");
         } 

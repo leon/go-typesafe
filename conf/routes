@@ -13,6 +13,7 @@ GET     /agility-and-quality/show-off       controllers.Application.agilityQuali
 GET     /agility-and-quality/get-proof      controllers.Application.agilityQualityGetProof()
 GET     /convince-your-boss                 controllers.Application.convince()
 GET     /resources                          controllers.Application.resources()
+GET     /thank-you                          controllers.Application.thankYou()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
