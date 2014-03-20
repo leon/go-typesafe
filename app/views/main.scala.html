@@ -73,8 +73,11 @@
                             <li><a href="@routes.Application.convince()">Convince Your Boss</a></li>
                             <li><a href="@routes.Application.resources()">All Resources</a></li>
                         </ul>
-                        <a class="footer-logo" href="http://www.typesafe.com">@components.logo()</a>
-                        <p>©2014</p>
+                        <div class="logos">
+                            <a class="footer-logo typsafe" href="http://www.typesafe.com">@components.logo()</a>
+                            <a class="footer-logo bold-radius" href="http://www.boldradius.com">@components.boldradius()</a>
+                        </div>
+                        <p>©2014 - All Rights Reserved</p>
                     </div>
                 </div>
                 <span class="reactive-graphic">@components.platform()</span>
