@@ -91,6 +91,7 @@ p {
   margin-bottom: 1em;
   font-size: 1em;
 }
+
 .anchor-jump {
   margin: 0 0 60px 0;
   height: 1px;
@@ -176,6 +177,7 @@ ul.no-bullets {
   padding-bottom: 67.5%;
   height: 0;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   overflow: hidden; 
 }
 .flex-video.widescreen {
@@ -470,6 +472,12 @@ article h1 {
 
 
 article {
+  a {
+    color: @blue;
+    &:hover {
+      color: @blue-text;
+    }
+  }
   h1,h2,h3 {
     color: @navy;
   }
@@ -483,7 +491,7 @@ article {
     margin: 0 0 1em 0;
     padding: 0 0 1em 0;
     width: 100%;
-    border-bottom: 2px solid @white-dkr;
+    border-bottom: 2px solid @navy;
     .svg-icon {
       float: left;
       width: 40px;
@@ -505,7 +513,6 @@ article {
       &:after {
         content: "\232A";
         margin: 0 0 0 15px;
-
       }
       &:last-child {
         &:after {
@@ -518,20 +525,59 @@ article {
       }
     }
   }
+  .step-intro {
+    
+    h3 {
+      text-transform: uppercase;
+      font-size: 1em;
+      margin-top: 0;
+
+      width: auto;
+      display: inline-block;
+      display: inline-block;
+      span {
+        background-color: @navy;
+        text-align: center;
+        color: @white;
+        border-radius: @br 0 0 @br;
+        padding: .5em;
+        display: inline-block;
+        border: 2px solid @navy;
+      }
+      strong {
+
+        text-align: center;
+        border: 2px solid @navy;
+        border-radius: 0 @br @br 0;
+        padding: .5em;
+        display: inline-block;
+
+      }
+
+    }
+    p {
+      color: @navy;
+    }
+    
+  }
+
   .bullet-setup {
     margin-bottom: .3em;
-    font-style: italic;
+    font-style: normal;
     font-weight: 700;
     margin-top: 1em;
-    color: @slate-ltr;
+    font-size: 1em;
+    color: @navy;
   }
   
 }
 .show-off article h2 {
   margin-bottom: .3em;
+  font-style: normal;
   font-weight: 700;
   margin-top: 1em;
   font-size: 1em;
+  color: @navy;
 }
 .get-proof article
   section {
