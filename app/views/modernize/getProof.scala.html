@@ -1,11 +1,22 @@
-@(message: String)
+@(message: String)(implicit request: RequestHeader)
+
+@metadesc = {Go Typesafe is a community curated set of resources to help you convince your peers and management to use the Typesafe Reactive Platform: Play Framework, Akka and Scala.}
+
+@title = {Modernize / Get Proof}
 
 @customMetas = {
-    <meta name="description" content="Go Typesafe is a set of resources that will help you convince others to adopt the Typesafe Reactive Platform: Play Framework, Akka and Scala">
+    <meta name="description" content="@desc(). @metadesc">
     <meta name="keywords" content="Go Typesafe, Typesafe, Typesafe Reactive Platform, Play Framework, Akka, Scala">
+    <meta property="og:title" content="@title - Go Typesafe" />
+    <meta property="og:url" content="@routes.Application.modernizeGetProof().absoluteURL()" />
+    <meta property="og:description" content="@desc(). @metadesc" />
+    <meta property="og:image" content="@routes.Assets.at("images/go-typesafe.png").absoluteURL()"/>
+    <meta name="twitter:title" content="@title - Go Typesafe">
+    <meta name="twitter:description" content="@desc(). @metadesc">
+    <meta name="twitter:image:src" content="@routes.Assets.at("images/go-typesafe.png").absoluteURL()">
 }
 
-@main("Modernize / Get Proof", "get-proof", customMetas) {
+@main(""+title, "get-proof", customMetas) {
 
     <article id="page-content" class="row">
         <div class="small-11 medium-9 large-8 small-centered columns">
